@@ -274,7 +274,7 @@ quickEditPosttype()
     ';
   }
 }
-show_admin_bar(false);
+//show_admin_bar(false);
 function repo_quick_edit_javascript() {
   global $current_screen;
   if (($current_screen->id != 'edit-post') || ($current_screen->post_type != 'post')) return;

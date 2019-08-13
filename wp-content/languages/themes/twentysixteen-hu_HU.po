@@ -11,27 +11,71 @@ msgstr ""
 "Language: hu\n"
 "Project-Id-Version: Themes - Twenty Sixteen\n"
 
-#. Theme Name of the plugin/theme
+#. Theme Name of the theme
 msgid "Twenty Sixteen"
 msgstr "Twenty Sixteen"
 
-#. Description of the plugin/theme
+#. Description of the theme
 msgid "Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead with an optional right sidebar that works perfectly for blogs and websites. It has custom color options with beautiful default color schemes, a harmonious fluid grid using a mobile-first approach, and impeccable polish in every detail. Twenty Sixteen will make your WordPress look beautiful everywhere."
 msgstr "Twenty Sixteen modernizált kinézete egyike a legnépszerűbb WordPress kinézetnek - vízszintes szalagcímmel és a választható jobb oldali oldalsáv tökéletes a blogokhoz, és más weboldalakhoz is. Saját színbeállításokkal és szépséges alapértelmezett színsémákkal, a kellemes, képernyőhöz igazodó rugalmas dizájn, amely a mobil megjelenést helyezi előtérbe, és minden részlete kifogástalanul kidolgozott. WordPress a Twenty Sixteen sablonnal minden eszközön ragyogóan mutat."
 
-#. translators: %s: Name of current post
-#: image.php:88 template-parts/content-page.php:39
-#: template-parts/content-search.php:28 template-parts/content-search.php:43
-#: template-parts/content-single.php:47 template-parts/content.php:53
-msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr "<span class=\"screen-reader-text\"> \"%s\"</span> szerkesztése"
+#: functions.php:202
+msgid "Bright Red"
+msgstr ""
+
+#: functions.php:197
+msgid "Dark Red"
+msgstr ""
+
+#: functions.php:192
+msgid "Medium Brown"
+msgstr ""
+
+#: functions.php:187
+msgid "Dark Brown"
+msgstr ""
+
+#: functions.php:182
+msgid "Light Blue"
+msgstr ""
+
+#: functions.php:177
+msgid "Bright Blue"
+msgstr ""
+
+#: functions.php:172
+msgid "Blue Gray"
+msgstr ""
+
+#: functions.php:167
+msgid "White"
+msgstr ""
+
+#: functions.php:162
+msgid "Light Gray"
+msgstr ""
+
+#: functions.php:157
+msgid "Medium Gray"
+msgstr ""
+
+#: functions.php:152
+msgid "Dark Gray"
+msgstr ""
 
 #. translators: %s: Name of current post
-#: inc/template-tags.php:194 template-parts/content.php:29
+#: template-parts/content.php:29 inc/template-tags.php:194
 msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr "<span class=\"screen-reader-text\">\"%s\"</span> bővebben"
 
-#: inc/customizer.php:324
+#. translators: %s: Name of current post
+#: template-parts/content.php:53 template-parts/content-page.php:39
+#: template-parts/content-search.php:28 template-parts/content-search.php:43
+#: template-parts/content-single.php:47 image.php:88
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "<span class=\"screen-reader-text\"> \"%s\"</span> szerkesztése"
+
+#: inc/customizer.php:345
 msgid "Red"
 msgstr "Vörös"
 
@@ -64,7 +108,7 @@ msgstr "Lábrész közösségi hivatkozások menü"
 msgid "Footer Primary Menu"
 msgstr "Lábrész elsődleges menü"
 
-#: functions.php:167
+#: functions.php:267
 msgid "Add widgets here to appear in your sidebar."
 msgstr "Az oldalsávon történő megjelenítéshez itt kell widgetet hozzáadni."
 
@@ -100,13 +144,13 @@ msgstr "Szerző:"
 msgid "Previous post:"
 msgstr "Korábbi bejegyzés:"
 
-#: single.php:39
-msgid "Next post:"
-msgstr "Következő bejegyzés:"
-
 #: single.php:41
 msgid "Previous"
 msgstr "Előző"
+
+#: single.php:39
+msgid "Next post:"
+msgstr "Következő bejegyzés:"
 
 #: single.php:38
 msgid "Next"
@@ -150,58 +194,58 @@ msgctxt "Used before post author name."
 msgid "Author"
 msgstr "Szerző"
 
-#: inc/customizer.php:334
+#: functions.php:207 inc/customizer.php:355
 msgid "Yellow"
 msgstr "Sárga"
 
-#: inc/customizer.php:314
+#: inc/customizer.php:335
 msgid "Gray"
 msgstr "Szürke"
 
-#: inc/customizer.php:304
+#: inc/customizer.php:325
 msgid "Dark"
 msgstr "Sötét"
 
-#: inc/customizer.php:294
-msgid "Default"
-msgstr "Alapértelmezett"
-
-#: inc/customizer.php:204
+#: inc/customizer.php:221
 msgid "Main Text Color"
 msgstr "Fő szöveg szín"
 
-#: inc/customizer.php:222
+#: inc/customizer.php:315
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#: inc/customizer.php:242
 msgid "Secondary Text Color"
 msgstr "Másodlagos szövegszín"
 
-#: inc/customizer.php:186
+#: inc/customizer.php:200
 msgid "Link Color"
 msgstr "Hivatkozás színe"
 
-#: inc/customizer.php:165
+#: inc/customizer.php:176
 msgid "Page Background Color"
 msgstr "Oldal háttérszín"
 
-#: image.php:107 single.php:31
+#: single.php:31 image.php:107
 msgctxt "Parent post link"
 msgid "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">%title</span>"
 msgstr "<span class=\"meta-nav\">Kategória</span>: <span class=\"post-title\">%title</span>"
 
-#: inc/customizer.php:145
-msgid "Base Color Scheme"
-msgstr "Alap színséma"
-
-#: inc/back-compat.php:41 inc/back-compat.php:54 inc/back-compat.php:70
+#: inc/back-compat.php:41 inc/back-compat.php:54 inc/back-compat.php:72
 msgid "Twenty Sixteen requires at least WordPress version 4.4. You are running version %s. Please upgrade and try again."
 msgstr "A Twenty Sixteen használatához minimálisan a WordPress 4.4 verziója szükséges. Ezen a honlapon a %s verzió üzemel. A frissítést követően próbáljuk újra."
+
+#: inc/customizer.php:153
+msgid "Base Color Scheme"
+msgstr "Alap színséma"
 
 #: image.php:77
 msgctxt "Used before full size attachment link."
 msgid "Full size"
 msgstr "Teljes méret"
 
-#: image.php:58 template-parts/content-page.php:24
-#: template-parts/content-single.php:26 template-parts/content.php:36
+#: template-parts/content.php:36 template-parts/content-page.php:24
+#: template-parts/content-single.php:26 image.php:58
 msgid "Pages:"
 msgstr "Oldal:"
 
@@ -213,67 +257,67 @@ msgstr "Következő kép"
 msgid "Previous Image"
 msgstr "Előző kép"
 
-#: header.php:49
+#: header.php:50
 msgid "Menu"
 msgstr "Menü"
 
-#: header.php:27
+#: header.php:28
 msgid "Skip to content"
 msgstr "Tartalomhoz"
 
-#: functions.php:301
+#: functions.php:407
 msgid "expand child menu"
 msgstr "almenü szétnyitása"
 
-#: functions.php:302
+#: functions.php:408
 msgid "collapse child menu"
 msgstr "almenü összezárása"
 
 #. translators: If there are characters in your language that are not supported
-#. by Montserrat, translate this to 'off'. Do not translate into your own
-#. language.
-#: functions.php:222
-msgctxt "Montserrat font: on or off"
-msgid "on"
-msgstr "on"
-
-#. translators: If there are characters in your language that are not supported
 #. by Inconsolata, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:227
+#: functions.php:327
 msgctxt "Inconsolata font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:189
+#: functions.php:277
+msgid "Content Bottom 1"
+msgstr "Tartalom alatt 1"
+
+#: functions.php:279 functions.php:291
+msgid "Appears at the bottom of the content on posts and pages."
+msgstr "A bejegyzések és oldalak tartalma alatt jelenik meg."
+
+#: functions.php:289
 msgid "Content Bottom 2"
 msgstr "Tartalom alatt 2"
 
 #. translators: If there are characters in your language that are not supported
 #. by Merriweather, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:217
+#: functions.php:317
 msgctxt "Merriweather font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:177
-msgid "Content Bottom 1"
-msgstr "Tartalom alatt 1"
+#. translators: If there are characters in your language that are not supported
+#. by Montserrat, translate this to 'off'. Do not translate into your own
+#. language.
+#: functions.php:322
+msgctxt "Montserrat font: on or off"
+msgid "on"
+msgstr "on"
 
-#: functions.php:179 functions.php:191
-msgid "Appears at the bottom of the content on posts and pages."
-msgstr "A bejegyzések és oldalak tartalma alatt jelenik meg."
-
-#: functions.php:165
+#: functions.php:265
 msgid "Sidebar"
 msgstr "Oldalsáv"
 
-#: functions.php:92 header.php:66
+#: functions.php:93 header.php:67
 msgid "Social Links Menu"
 msgstr "Közösségi hivatkozások menü"
 
-#: functions.php:91 header.php:53
+#: functions.php:92 header.php:54
 msgid "Primary Menu"
 msgstr "Elsődleges menü"
 
@@ -293,17 +337,17 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] "&ldquo;%2$s&rdquo; bejegyzéshez %1$s hozzászólás"
 msgstr[1] "&ldquo;%2$s&rdquo; bejegyzéshez %1$s hozzászólás"
 
-#: archive.php:53 image.php:62 index.php:50 search.php:41
+#: archive.php:53 template-parts/content.php:40
 #: template-parts/content-page.php:28 template-parts/content-single.php:30
-#: template-parts/content.php:40
+#: search.php:41 index.php:50 image.php:62
 msgid "Page"
 msgstr "Oldal"
 
-#: archive.php:52 index.php:49 search.php:40
+#: archive.php:52 search.php:40 index.php:49
 msgid "Next page"
 msgstr "Következő oldal"
 
-#: archive.php:51 index.php:48 search.php:39
+#: archive.php:51 search.php:39 index.php:48
 msgid "Previous page"
 msgstr "Előző oldal"
 
@@ -315,16 +359,15 @@ msgstr "Úgy tűnik, ezen a helyen nem található amit kerestünk. Talán egy �
 msgid "Oops! That page can&rsquo;t be found."
 msgstr "A keresett oldal nem található."
 
-#. Theme URI of the plugin/theme
+#. Theme URI of the theme
 msgid "https://wordpress.org/themes/twentysixteen/"
 msgstr "https://wordpress.org/themes/twentysixteen/"
 
-#. Author of the plugin/theme
+#. Author of the theme
 msgid "the WordPress team"
 msgstr "WordPress Magyarország Közösség"
 
-#. #-#-#-#-#  twentysixteen.pot (Twenty Sixteen 1.5)  #-#-#-#-#
-#. Author URI of the plugin/theme
+#. Author URI of the theme
 #: footer.php:60
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
