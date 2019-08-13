@@ -27,34 +27,5 @@ if($tematika): ?>
             </ul>
         </div>
     </section>
-    <script>
-        jQuery(document).ready(function(){
-            function setTematikaIcons(){
-                jQuery('#tematika.faq .tematika-lista li.closed i').text('add')
-                jQuery('#tematika.faq .tematika-lista li.opened i').text('remove')
-            }
-            jQuery('#tematika.faq .tematika-lista li i').click(function(){
-                if(jQuery(this).text() == 'add'){
-                    jQuery(this).parent().parent().removeClass('closed').addClass('opened')
-                }else{
-                    jQuery(this).parent().parent().removeClass('opened').addClass('closed')
-                }
-                setTematikaIcons()
-            })
-            jQuery('.unfold i').click(function(){
-                if(jQuery(this).text() == 'unfold_less'){
-                    jQuery(this).text('unfold_more')
-                    jQuery(this).parent().find('span').text("Összeset kinyit")
-                    jQuery('#tematika.faq .tematika-lista li').removeClass("opened").addClass('closed')
-                }else{
-                    jQuery(this).text('unfold_less')
-                    jQuery(this).parent().find('span').text("Összeset becsuk")
-                    jQuery('#tematika.faq .tematika-lista li').removeClass("closed").addClass('opened')
-                }
-                setTematikaIcons()
-            })
-            jQuery('.unfold i').click();
-        })
 
-    </script>
 <?php endif; ?>
