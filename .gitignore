@@ -5,7 +5,7 @@
 *.bak
 *.swp
 Thumbs.db
-
+.idea
 # wordpress specific
 wp-config.php
 wp-content/uploads/
@@ -17,7 +17,7 @@ wp-content/wp-cache-config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
 wp-content/themes/yusp-3.0/node_modules
-
+wp-content/themes/pentaschool/node_modules
 # wpengine specific
 .smushit-status
 .gitattributes
