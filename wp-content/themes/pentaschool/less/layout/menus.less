@@ -1,0 +1,389 @@
+@import (reference) "../pentaschool.less";
+
+@mobile-menu-height: 4rem;
+
+#left-side{
+
+  @media @md, @lg, @xl, @xxl {
+
+    width: @grid-left;
+    height: @square;
+
+    display: flex;
+    justify-content: center;
+    position: fixed;
+
+    left: 0;
+    z-index: 110;
+
+    bottom: ~'calc(100% - @{square})';
+    .p-menu(1.1s);
+
+
+    i.material-icons {
+      position: absolute;
+      padding: 0.5rem;
+      border-radius: 999rem;
+      background: fade(@p-y1, 0);
+      cursor: pointer;
+      .tr2;
+
+      &:hover {
+        background: fade(@p-y1, 40%);
+        .tr2;
+      }
+
+      &:active, &:focus {
+        background: fade(@p-y1, 100%);
+        color: @brown1;
+        .tr2;
+
+      }
+    }
+
+    i.menu {
+      opacity: 1;
+      visibility: visible;
+      .scale(1);
+      .p-menu(1.1s);
+    }
+
+    i.up {
+      opacity: 0;
+      visibility: hidden;
+      .p-menu(1.1s);
+      .scale(0);
+    }
+
+    &.bottom {
+      bottom: 20%;
+      .p-menu(1.1s);
+
+      i.menu {
+        opacity: 0;
+        visibility: hidden;
+        .p-menu(1.1s);
+        .scale(0);
+      }
+
+      i.up {
+        opacity: 1;
+        visibility: visible;
+        .scale(1);
+      }
+    }
+
+    #logo {
+      width: @square;
+      height: @square;
+      background: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      i {
+        color: @brown1;
+      }
+    }
+  }
+
+
+  @media @xs, @sm{
+    .flex(row, initial);
+    height: @mobile-menu-height;
+    background:#fff;
+  margin-left:-4%;
+  margin-right:-4%;
+    padding-left: 4%;
+    @media @sm {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+
+    @media @xs {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    i.menu{
+      color: @brown0;
+      cursor: pointer;
+      z-index: 1000;
+      position: relative;
+
+    }
+
+    i.up{
+      display: none;
+    }
+  }
+}
+
+
+#menu {
+  .flex(row, initial);
+  height: @square;
+  align-items: flex-end;
+
+  border-radius: @border-radius;
+  position: relative;
+  z-index: 1;
+  justify-content: space-between;
+
+  margin-top: -@border-radius;
+  padding-top: @border-radius;
+
+  @media @xs, @sm{
+    display: none;
+  }
+
+  /*
+  #logo {
+    display: none;
+    z-index: 110;
+    margin-right: 2rem;
+
+    height: 70%;
+    background: red;
+    align-items: center;
+    padding: 0 2rem;
+  }
+  */
+
+  ul {
+
+    li {
+      display: inline;
+      margin-right: 1rem;
+
+      a {
+        .md-text;
+        color: @brown0;
+        padding: 0.2rem 0.4rem;
+        box-sizing: border-box;
+        background: transparent;
+        border-radius: 2px;
+        .tr2;
+      }
+    }
+
+    li:hover a{
+      background: white;
+      //.tr2;
+    }
+    & li:last-child:hover a{
+      background:transparent;
+    }
+
+
+    li.selected a{
+      background: @p-y4;
+      color: white;
+      //.tr2;
+    }
+  }
+
+  #course-search{
+    color: @p-b4;
+    cursor: pointer;
+
+    padding: .5rem;
+    border-radius: 999rem;
+    background: fade(white, 10%);
+    .tr2;
+
+    &:hover{
+      background: white;
+      color: @p-b4;
+    }
+  }
+}
+
+
+/*
+
+  z-index: 100;
+  background: @p-y1;
+  position: fixed;
+  top: 0;
+  box-sizing: border-box;
+  background: @p-y1;
+
+  @media @xs, @sm{
+    height: 100%;
+    width: 100%;
+    padding-left: 2*@grid-left;
+
+  }
+
+  @media @md, @lg, @xl, @xxl{
+    height: 80%;
+    width: 100%;
+  }
+
+ */
+
+#pnt-megamenu{
+
+  z-index: 100;
+  //background: @p-y1;
+  background: #f7f7f7;
+  position: fixed;
+  top: 0;
+  
+  box-sizing: border-box;
+  background: @p-y1;
+
+  @media @xs, @sm{
+    height: 100%;
+    right: 20%;
+    width: 80%;
+	.translateY(-180%);
+	
+    //padding-left: @grid-left;
+	
+    &:before{
+      content: '';
+      display: block;
+      background: fade(@brown0, 60%);
+
+      position: absolute;
+      width: 26%;
+      height: 100%;
+      top: 0;
+      right: -25%;
+    }
+  }
+padding-top:30px;
+  @media @md, @lg, @xl, @xxl{
+    left: 0;
+    height: 80%;
+    width: 100%;
+    padding-left: @grid-left;
+    padding-right: @grid-left;
+  }
+	@media @md{
+		padding-left:30px;
+		padding-right:30px;
+		
+	}
+  .translateY(-110%);
+  opacity:0;
+  .p-menu(1.1s);
+
+  &.opened{
+    .translateY(0%);
+	opacity:1;
+
+	
+  }
+	
+  .priority-menu{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    border-left: 1px solid fade(@brown1, 10%);
+
+    ul{
+      @media @xs, @sm{
+        margin-left: 4%;
+        margin-top:30px;
+      }
+
+      @media @md, @lg, @xl, @xxl{
+        margin-left: 1rem;
+      }
+
+      li{
+        .xl-text;
+        @media @xs,@sm{
+          font-size:1.8rem;
+        }
+        margin-bottom: 1rem;
+        font-weight: 300;
+
+        a{
+          color: @brown1;
+        }
+
+      }
+      & li:last-child{
+        display:none
+      }
+    }
+  }
+  .megamenu-promoted{
+	width:70%;
+	@media @lg,@md,@sm,@xs{
+		display:none;
+	}
+  }
+  .megamenu-bottom{
+ 	@media @md,@sm,@xs{
+		display:none;
+	} 
+  }
+  h1{
+	font-weight:500;
+	font-size:2rem;
+	color:@brown1;
+	margin-bottom:30px;
+  }
+  .active-course{
+	min-height:auto;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:0px;
+    padding-left:0px;
+	.date{
+		background:@p-y4;
+		color:#fff;
+	}
+  }
+	&>div{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	ul.kismenu{
+		margin-top:30px;
+		li{
+			.lg-text;
+			color:@brown1;
+			font-size:1.3rem;
+			a{
+				color:@brown1;
+			}
+			line-height:40px;
+			&.english{
+					padding-left: 50px;
+					
+					position: relative;
+					&:before{
+						display: block;
+						content: "";
+						width: 38px;
+						height: 19px;
+						background: url(../img/flag.png);
+						position: absolute;
+						left: 0px;
+						top: 6px;
+						background-size: cover !important;
+					}
+			}
+		}
+	}
+	p{
+		font-size: 1.2rem;
+		font-weight: 500;
+		line-height: 30px;
+		color:@brown1;
+		margin-top: 48px;
+	}
+}
+
+

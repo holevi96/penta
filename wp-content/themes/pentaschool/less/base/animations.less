@@ -1,0 +1,124 @@
+/* TRANSITIONS */
+
+.tr0{
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0s;
+  -moz-transition-duration: 0s;
+  -o-transition-duration: 0s;
+  -ms-transition-duration: 0s;
+  transition-duration: 0s;
+}
+
+.tr1{
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  -o-transition-duration: 0.1s;
+  -ms-transition-duration: 0.1s;
+  transition-duration: 0.11s;
+}
+.tr2{
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+.tr4{
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  -ms-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  -ms-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.tr(@transition-speed){
+  -webkit-transition-property: @transition-speed;
+  -moz-transition-property: @transition-speed;
+  -o-transition-property: @transition-speed;
+  -ms-transition-property: @transition-speed;
+  transition-property: @transition-speed;
+  -webkit-transition-duration: @transition-speed;
+  -moz-transition-duration: @transition-speed;
+  -o-transition-duration: @transition-speed;
+  -ms-transition-duration: @transition-speed;
+  transition-duration: @transition-speed;
+}
+
+.delay(@delay-speeed){
+  -webkit-animation-delay: @delay-speeed; /* Safari 4.0 - 8.0 */
+  animation-delay: @delay-speeed;
+}
+
+.bezier-eas-out(@speed){
+  transition: all @speed cubic-bezier(0.36, 0.26, 0.47, 0.90)
+}
+
+.scale(@scaleRate){
+  -ms-transform: scale(@scaleRate, @scaleRate); /* IE 9 */
+  -webkit-transform: scale(@scaleRate, @scaleRate); /* Safari */
+  transform: scale(@scaleRate, @scaleRate);
+}
+
+.bezier-eas-in(@speed){
+  transition: all @speed cubic-bezier(0.15, 0.42, 0.74, 0.54)
+}
+
+.bezier-3(@speed){
+  transition: all @speed cubic-bezier(.01,.53,.78,.92);
+}
+
+.bezier-eas-in-slow(@speed){
+  transition: all @speed cubic-bezier(.21,.42,.19,.99);
+}
+
+.p-menu(@speed){
+  transition: all @speed cubic-bezier(0.53, 0.79, 0, 0.98);
+}
+
+.bezier-eas-out-slow(@speed){
+  transition: all @speed cubic-bezier(.78,.14,.81,.98);
+}
+
+.translateX(@translateX){
+  -ms-transform: translateX(@translateX); /* IE 9 */
+  -webkit-transform: translateX(@translateX); /* Safari */
+  transform: translateX(@translateX);
+}
+
+.translateY(@translateY){
+  -ms-transform: translateY(@translateY); /* IE 9 */
+  -webkit-transform: translateY(@translateY); /* Safari */
+  transform: translateY(@translateY);
+}
+
+.bumping{
+  float: left;
+  -webkit-animation-name: Floatingx;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-name: Floating;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+}
+

@@ -1,0 +1,85 @@
+@import (reference) "../pentaschool.less";
+
+@font-3: 'KoHo';
+@font: 'KoHo';
+
+@square: 4.67875rem;
+@grid-left: 11.25rem;
+@border-radius: 6px;
+@border2: 6px;
+
+.w(@w){
+  width: ~'calc(100% / 5 * @{w})';
+}
+
+.flex(@flow, @content){
+  display: flex;
+  flex-flow: @flow;
+  justify-content: @content;
+  align-items: center;
+}
+
+.body{
+  background: @p-bg;
+
+}
+
+.pnt-container{
+
+}
+
+.pnt-container {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+
+  @media @lg, @xl, @xxl{
+    padding-left: @grid-left;
+    padding-right: @square;
+  }
+
+  @media @xs, @sm, @md{
+    width: 100%;
+  }
+
+  @media @md{
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  @media @sm {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  @media @xs {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  /*
+  @media @md {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  @media @lg {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  @media @xl {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media @xxl {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  */
+
+}
+
+
+

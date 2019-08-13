@@ -1,0 +1,118 @@
+@import (reference) "../framework.less";
+@import (reference) "../components.less";
+
+#single-page{
+  position: relative;
+  background: url('@{root}/img/penta-header-smaller.svg');
+  background-repeat: no-repeat;
+  background-color: @p-bg;
+}
+
+
+.page-content{
+
+  padding: 3rem;
+  background: white;
+  border-radius: @border-radius;
+  margin-top: 2rem;
+  @media @sm, @xs{
+    padding: 1rem;
+  }
+  @media @xxl, @xl{
+    width: 70%;
+    margin: 4rem auto 0;
+  }
+}
+
+.wyswyg-content{
+
+
+  h1, h2, h3, h4, h5, p, li, ul, ol{
+    color: @brown0;
+    margin: 1.3rem 0;
+    font-family: @font;
+  }
+
+  h1{
+    .xxl-text;
+    @media @sm, @xs{
+      font-size: 2rem;
+    }
+  }
+
+  h2{
+    .xl-text;
+  }
+
+  h3{
+    .lg-text;
+  }
+
+  h4{
+    .md-text;
+  }
+
+  p{
+    .md-text;
+  }
+
+  &.koszonjuk{
+	img{
+		width:30%;
+		@media @sm,@xs{
+			width:100%;
+		}
+	}
+  }
+
+  ul{
+  margin-left:20px;
+    li{
+      list-style: initial;
+      margin: 1rem 0;
+    }
+  }
+
+  ol{
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+
+    li{
+      margin: 1rem 0;
+      list-style: decimal;
+    }
+  }
+
+
+  hr{
+    border: none;
+    background-color: @p-y3;
+    height: 1px;
+  }
+
+  a{
+    text-decoration: underline;
+    color: @p-y4;
+  }
+
+  iframe{
+    width: 100%;
+    height: 100%;
+
+  }
+  #referenciak-table{
+    position: relative;
+    top: 30px;
+    th{
+      text-align: left;
+    }
+    @media @xs,@sm{
+      tr th:nth-child(4),tr th:nth-child(5),tr td:nth-child(4),tr td:nth-child(5){
+        display:none;
+      }
+      font-size:11px;
+    }
+  }
+}

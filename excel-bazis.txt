@@ -1,0 +1,8 @@
+				<ul>
+							<li><a href="http://excel-bazis.hu/forumok/topic/ismetlodo-ertekek-eltavolitasa-keplettel-segedoszlopban">[Resolved] Ismétlődő értékek eltávolítása képlettel segédoszlopban</a></li>
+							<li><a href="http://excel-bazis.hu/forumok/topic/2019">2019</a></li>
+							<li><a href="http://excel-bazis.hu/forumok/topic/gordulo-osszegzes-7-naponkent">[Resolved] gördülő összegzés 7 naponként</a></li>
+							<li><a href="http://excel-bazis.hu/forumok/topic/keresofuggveny-tovabbi-feltetelekkel">[Resolved] Keresőfüggvény további feltételekkel?</a></li>
+							<li><a href="http://excel-bazis.hu/forumok/topic/zarolt-cellak-masolasa">Zárolt cellák másolása</a></li>
+					</ul>
+		

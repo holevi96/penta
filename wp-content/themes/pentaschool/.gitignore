@@ -1,0 +1,10 @@
+node_modules/
+.idea
+
+dist/proto\.min\.css
+
+dist/proto\.min\.css\.map
+
+dist/yuspify-app\.min\.js
+
+dist/yuspify-app\.min\.js\.map

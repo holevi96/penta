@@ -1,0 +1,19 @@
+@import (reference) "grid-basics";
+
+@media @xs, @sm{
+  .mobile{
+    display: block;
+  }
+  .desktop{
+    display: none;
+  }
+}
+
+@media @md, @lg, @xl, @xxl{
+  .mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+}

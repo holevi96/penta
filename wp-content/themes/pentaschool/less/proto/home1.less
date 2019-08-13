@@ -1,0 +1,270 @@
+@import (reference) "../framework.less";
+
+
+//.flex(row, space-between);
+
+.course-item {
+  .flex(column, space-between);
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%;
+  align-items: flex-start;
+
+  h2 {
+    .md-text;
+  }
+
+  h3 {
+    .xl-text;
+  }
+
+  div {
+
+  }
+}
+
+.home-atf {
+  background: @p1;
+
+  .first-courses {
+    .flex(row, space-between);
+    height: 70vh;
+
+    .one, .two, .tree {
+      display: flex;
+      width: 100%;
+    }
+
+    .one {
+      .flex(column, space-between);
+      height: 100%;
+      padding: 1rem;
+    }
+
+    .two {
+      .flex(column, space-between);
+      height: 100%;
+    }
+    .tree {
+      .flex(column, space-between);
+      height: 100%;
+    }
+  }
+}
+
+@atf-color: @yellow;
+//@atf-color: @purple;
+//@atf-color: @blue;
+//@atf-color: @light-blue;
+
+.above-the-fold {
+  //background: @p1;
+  background-image: url('@{root}/img/penta-bg-bw.jpg');
+  background-color: @atf-color;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+
+  &.yellow{
+    background-blend-mode: overlay;
+    background-color: @yellow;
+
+    &:after{
+      background: fade(@yellow, 05%);
+    }
+  }
+
+  &.purple{
+    background-blend-mode: overlay;
+    background-color: @purple;
+
+    &:after{
+      background: fade(@purple, 30%);
+    }
+  }
+
+  &:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: block;
+    content: '';
+    visibility: visible;
+  }
+
+  .course-state{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+
+    visibility: hidden;
+    opacity: 0;
+    .bezier-eas-in-slow(0.3s);
+
+    display: flex;
+    align-items: center;
+
+    &.selected{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .infosheet{
+      height: 40%;
+      width: 30%;
+      margin: 2rem;
+
+      h2{
+        .lg-text;
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      p{
+        .md-text;
+        color: white;
+      }
+
+      h3{
+        .xxl-text;
+        font-weight: 800;
+        font-style: italic;
+        color: @s2c1;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .course-state-1{
+    background: fade(@p2, 90%);
+  }
+
+  .course-state-2{
+    background: fade(@s2c5, 90%);
+  }
+
+  .course-state-3{
+    background: fade(@s2c3, 90%);
+  }
+
+}
+
+.course-slider {
+  .flex(row, space-between);
+  height: 70vh;
+  position: relative;
+
+  li {
+    height: 60%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .course {
+    position: relative;
+    z-index: 10;
+
+    .wrapper {
+      padding: 20% 1rem 3rem;
+      box-sizing: border-box;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+      margin: 2rem 0;
+      border-radius: @border-radius;
+      cursor: pointer;
+      .bezier-eas-in-slow(0.3s);
+
+      h2 {
+        .md-text;
+        .translateY(0);
+        .bezier-eas-in-slow(0.3s);
+      }
+
+      h3 {
+        margin-top: 1rem;
+        .lg-text;
+      }
+    }
+
+    .wrapper:hover{
+      border: 2px solid white;
+
+      h2{
+
+        .translateY(60px);
+      }
+    }
+  }
+
+  li:first-child {
+    width: 150%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+
+    h1 {
+      color: @p3;
+      .xl-text;
+      font-family: @font;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      font-style: italic;
+      margin: 1rem;
+    }
+  }
+
+  li:nth-child(2) {
+    .wrapper{
+      background: @s2c2;
+      border: 2px solid transparent;
+
+      &.selected{
+        border: 2px solid @p1;
+      }
+
+      h2, h3{
+        color: white;
+      }
+    }
+  }
+
+  li:nth-child(3) {
+    .wrapper{
+      background: @s2c5;
+      border: 2px solid transparent;
+
+      &.selected{
+        border: 2px solid @p1;
+      }
+
+      h2, h3{
+        color: @p1;
+      }
+    }
+  }
+
+  li:nth-child(4) {
+    .wrapper{
+      background: @s2c3;
+      border: 2px solid transparent;
+
+      &.selected{
+        border: 2px solid @p1;
+      }
+
+      h2, h3{
+        color: white;
+      }
+    }
+  }
+}

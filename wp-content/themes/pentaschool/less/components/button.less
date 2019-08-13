@@ -1,0 +1,270 @@
+@import (reference) "../framework";
+
+.p-button {
+  font-weight: 400;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 4px;
+  border-radius: @border-radius;
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+  .tr2;
+
+  i{
+
+  }
+	a{
+		color:inherit;
+	}
+  &.small{
+    //font-size: 16px;
+    //line-height: 20px;
+    .sm-text;
+    padding: 0.4rem 0.7rem;
+
+    i{
+      line-height: 20px;
+      font-size: 18px;
+      padding-right: 0.7rem;
+    }
+  }
+
+  &.medium{
+    .md-text;
+    //font-size: 16px;
+    //line-height: 20px;
+    padding: 0.6rem 1rem;
+  }
+
+  &.large{
+    .lg-text;
+    //font-size: 18px;
+    //line-height: 23.4px;
+    padding: 1rem 2rem;
+  }
+
+
+  &.brown{
+    background: @brown2;
+    color: white;
+    border: 2px solid darken(@brown1, 1%);
+
+    &:hover{
+      background: @p-y4;
+      border-color: @p-y4;
+      border: 2px solid darken(@p-y4, 10%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+  }
+
+  &.yellow{
+    background: @p-y1;
+    border-color: @p-y1;
+    color: @brown0;
+    border: 2px solid darken(@p-y1, 2%);
+    //box-shadow: 0 0px 10px fade(@p-y1, 30%);
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @p-y4;
+      border-color: @p-y4;
+      border: 2px solid darken(@p-y4, 10%);
+      color: @brown0;
+      //box-shadow: 0 9px 40px fade(@p-y4, 30%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @p-y4;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+
+  &.orange{
+    background: @p-y4;
+    border-color: @p-y4;
+    color: white;
+    border: 2px solid darken(@p-y4, 1%);
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @brown2;
+      border-color: @brown2;
+      border: 2px solid darken(@brown2, 10%);
+      color: white;
+      //box-shadow: 0 9px 40px fade(@p-y4, 30%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @brown1;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+
+
+
+  &.white{
+    background: white;
+    border-color: white;
+    color: @brown1;
+    border: 2px solid @gray1;
+    //box-shadow: 0 0px 10px fade(@brown1, 30%);
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @p-y4;
+      border-color: @p-y4;
+      border: 2px solid @brown2;
+      //box-shadow: 0 9px 40px fade(@p-y4, 30%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @brown1;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+
+
+  &.invisible {
+    background: @gray2;
+    border-color: @gray2;
+    color: @brown0;
+    //box-shadow: 0 0px 10px fade(@brown0, 0%);
+    text-decoration: underline;
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @p-y1;
+      border-color: @p-y1;
+      //box-shadow: 0 9px 40px fade(@p-y4, 30%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @brown1;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+
+  /*
+  &.orange{
+    background: @p-y4;
+    border-color: @p-y4;
+    border: 2px solid @brown2;
+    //box-shadow: 0 9px 40px fade(@p-y4, 30%);
+    color: white;
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @brown0;
+      border-color: @brown0;
+      box-shadow: 0 9px 40px fade(@brown0, 30%);
+      color: @p-y4;
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p-y4, 10%);
+    }
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @p-y4;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+  */
+
+  /*
+  &.blue {
+    background: @p2;
+    border-color: @p2;
+    color: @p1;
+    box-shadow: 0 9px 40px fade(@p2, 30%);
+    border-radius: 999rem;
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      background: @p1;
+      border-color: @p1;
+      box-shadow: 0 9px 40px fade(@p2, 30%);
+    }
+
+    &:active{
+      box-shadow: inset 0 4px 10px fade(@p2, 10%);
+    }
+	
+
+    &.ghost{
+      background: transparent;
+      border: 2px solid inherit;
+      color: @p3;
+
+      &:hover{
+        background: transparent;
+        border: 2px solid inherit;
+      }
+    }
+  }
+  */
+
+  /*
+  &.ghost{
+    border: 2px solid white;
+
+    &:hover{
+      background: white;
+      color: @brown1;
+    }
+  }
+  */
+
+
+}

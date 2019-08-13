@@ -1,0 +1,169 @@
+@import (reference) "../pentaschool.less";
+
+#course-search-panel{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 6rem;
+  width: 100%;
+
+  background: white;
+  z-index: 1000;
+  display: flex;
+
+  .translateY(-120%);
+  .p-menu(0.4s);
+
+  &.opened{
+    .translateY(0);
+  }
+
+  .close-search{
+    width: @grid-left;
+    .flex(row, center);
+
+    i{
+      color: @gray3;
+      cursor: pointer;
+    }
+  }
+
+  input{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: @p-b4;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    .lg-text;
+    .tr2;
+
+    &:focus{
+     // background: @p-y2;
+    }
+  }
+
+}
+#main-menu{
+position:relative;	
+  .course-search-result{
+	height:0;
+	position:absolute;
+	overflow:hidden;
+	.bezier-eas-in-slow(0.3s);
+	&.opened{
+		height: 100vh;
+		z-index:10000;
+		overflow-y: scroll;
+		height: calc(90vh);
+		position: absolute;
+		top: 100px;
+		border-top: 1px solid #ccc;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		.active-course{
+			margin-left:0;
+			margin-top:20px;
+		}
+	}
+  }
+}
+#main-search{
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  z-index: 10;
+
+  #the-search-field{
+    outline: none;
+    line-height: 1.4625rem;
+    background-repeat: no-repeat;
+    background-position: right .2rem center;
+    background-size: 1.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+    //background-image: url(data:image/svg+xml;charset=utf-8,<svg fill="%234275f4" height="24" viewBox=…7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg>);
+
+    padding: 0 0.8rem;
+    height: 3rem;
+
+    border-radius: @border-radius;
+    border: 2px solid fade(@brown0, 20%);
+
+    background: white;
+    color: @brown0;
+    .lg-text;
+    .bezier-eas-in-slow(0.3s);
+
+    &:hover{
+      box-shadow: 0 0 10px fade(@brown0, 10%);
+      border: 2px solid @brown0;
+    }
+
+    &:active, &:focus{
+      background: white;
+      box-shadow: 0 4px 15px fade(@brown0, 20%);
+      border: 2px solid @brown0;
+    }
+  }
+
+  .search{
+    position: absolute;
+    right: 9px;
+    top: 19px;
+    color: @brown0;
+  }
+
+  /*
+  ul.search-result{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    margin-top: -2px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background: white;
+    border: 2px solid @yfy-light-blue;
+    box-shadow: 0 9px 20px fade(@yfy-light-blue, 10%);
+    border-radius: 5px;
+    z-index: 100;
+    .bezier-eas-in-slow(0.3s);
+
+    &.opened{
+      visibility: visible;
+      opacity: 1;
+    }
+
+    li{
+      display: flex;
+      color: @shy-primary-1;
+      padding: 0 0.5rem;
+      box-sizing: border-box;
+      margin-bottom: 1px;
+      line-height: 2rem;
+      border-radius: 3px;
+      .lg-text;
+      .bezier-eas-in-slow(0.3s);
+      cursor: pointer;
+    }
+
+    li:hover{
+      background: fade(@yfy-purple, 10%);
+    }
+
+    li:focus, li:active{
+      background: fade(@yfy-purple, 30%);
+    }
+  }
+  */
+}

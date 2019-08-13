@@ -1,0 +1,383 @@
+@import (reference) "../pentaschool.less";
+
+@style-sheet-menu-width: 20rem;
+
+div#style-sheet{
+  display: flex;
+  flex-flow: row;
+
+  #menu{
+    width: @style-sheet-menu-width;
+    position: fixed;
+    height: 100vh;
+    border-right: 1px solid @gray2;
+
+    ul{
+      margin: 1rem;
+
+      li{
+        .lg-text;
+        color: @brown0;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  #content{
+    width: ~'calc(100% - @{style-sheet-menu-width})';
+    margin-left: @style-sheet-menu-width;
+  }
+
+  .stylesheet-h1{
+    .xl-text;
+    color: black;
+    font-weight: 300;
+  }
+
+  section{
+    background: @p-bg;
+    padding: 1rem 1rem 10rem 1rem;
+    border-bottom: 1px solid @gray2;
+
+    h1.style-title{
+      .stylesheet-h1;
+      margin: 1rem;
+      text-transform: uppercase;
+    }
+
+    h1{
+      .lg-text;
+      margin-left: 1rem;
+    }
+
+    .description{
+      .md-text;
+      width: 30%;
+      margin: 2rem 1rem 2rem;
+    }
+  }
+}
+
+#style-sheet{
+
+  h1, h2, h3, h4, h5, p, li{
+    font-family: @font;
+  }
+
+  .sm-text, .md-text, .lg-text, .xl-text, .xxl-text{
+    font-family: @font;
+  }
+
+}
+
+
+.colors-listing{
+  display: flex;
+  flex-flow: wrap;
+
+  &.sec{
+    .color{
+      width: 15%;
+      height: 160px;
+    }
+  }
+
+  .color{
+    width: 30%;
+    margin: 1rem;
+    height: 160px;
+    border-radius: 5px;
+    border: @gray1;
+    padding: 1rem;
+    box-sizing: border-box;
+    .flex(column, space-between);
+    align-items: flex-start;
+    box-shadow: 0 0 4px fade(@brown0, 35%);
+
+
+    h1{
+      .lg-text;
+      color: black;
+      display: flex;
+      width: 100%;
+    }
+
+    h2{
+      .md-text;
+    }
+
+    div{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      &:first-child{
+        margin-right: 1rem;
+      }
+
+      h3{
+        .lg-text;
+        font-weight: 300;
+      }
+    }
+
+    /* PRIMARY COLORS  */
+
+    &.p-yellow-1{
+      background: @p-y1;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-yellow-2{
+      background: @p-y2;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-yellow-3{
+      background: @p-y3;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-yellow-4{
+      background: @p-y4;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-brown-0{
+      background: @brown0;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-brown-1{
+      background: @brown1;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-brown-2{
+      background: @brown2;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    /* SECONDARY COLORS */
+
+    &.p-blue-1{
+      background: @p-b1;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-blue-2{
+      background: @p-b2;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-blue-3{
+      background: @p-b3;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+    &.p-blue-4{
+      background: @p-b4;
+
+      h2, h3{
+        color: white;
+      }
+    }
+
+
+    /* GRAY AND BACKGROUND */
+    &.p-gray1{
+      background: @gray1;
+
+      h2, h3{
+        color: black;
+      }
+    }
+
+    &.p-gray2{
+      background: @gray2;
+
+      h2, h3{
+        color: black;
+      }
+    }
+
+    &.p-gray3{
+      background: @gray3;
+
+      h2, h3{
+        color: black;
+      }
+    }
+
+    &.p-gray4{
+      background: @gray4;
+
+      h2, h3{
+        color: black;
+      }
+    }
+
+    &.p-bg{
+      background: @p-bg;
+      //border: 1px solid @yfy-purple;
+
+      h2, h3{
+        color: black;
+      }
+
+    }
+  }
+}
+
+
+.typo-listing{
+  margin: 1rem;
+
+  li{
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 0 0 1rem 0;
+
+    span{
+      width: 150px;
+    }
+  }
+
+
+  h1{
+    margin: 1rem 0;
+  }
+}
+
+/*
+#layout{
+
+  .listing{
+    margin: 3rem 0;
+
+    h1{
+      margin-bottom: 3rem;
+    }
+
+  }
+
+  .container{
+    width: 100%;
+
+    .yfy-center-container{
+      padding: 1rem 3.2rem;
+      background: fade(@shy-primary-1, 10%);
+      text-align: center;
+      color: white;
+
+      p{
+        color: @shy-primary-1;
+      }
+
+      .container-example{
+        width: 100%;
+        align-items: center;
+
+        p{
+          .lg-text;
+          padding: 1rem;
+          color: @shy-primary-1;
+          background: fade(@shy-primary-1, 10%);
+        }
+      }
+    }
+  }
+}
+
+
+#buttons{
+
+  .listing{
+    margin: 1rem;
+
+    h1{
+      margin: 2rem 0;
+    }
+  }
+}
+
+#inputs{
+
+  .input-lisitng{
+    li{
+      margin-bottom: 2rem;
+    }
+  }
+
+}
+
+#activators{
+
+  .wrapperr{
+    padding: 2rem;
+    width: 100%;
+    display: table-cell;
+
+    &>div{
+      margin: 2rem;
+      align-items: center;
+      display: flex;
+
+      p{
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+#utilities{
+
+  .yfy-ui-card{
+    margin: 3rem 0;
+
+    &.green-shadow{
+      box-shadow: @bs-green;
+    }
+
+    &.blue-shadow{
+      box-shadow: @bs-blue;
+    }
+
+    &.purple-shadow{
+      box-shadow: @bs-purple;
+
+    }
+  }
+}
+*/

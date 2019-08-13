@@ -1,0 +1,325 @@
+@import (reference) "grid-basics";
+
+/*** --- PRE-BUILDED GRID CLASSES --- ***/
+
+.col-rsp-1  {width: (100% / 12) * 1};
+.col-rsp-2  {width: (100% / 12) * 2};
+.col-rsp-3  {width: (100% / 12) * 3};
+.col-rsp-4  {width: (100% / 12) * 4};
+.col-rsp-5  {width: (100% / 12) * 5};
+.col-rsp-6  {width: (100% / 12) * 6};
+.col-rsp-7  {width: (100% / 12) * 7};
+.col-rsp-8  {width: (100% / 12) * 8};
+.col-rsp-9  {width: (100% / 12) * 9};
+.col-rsp-10 {width: (100% / 12) * 10};
+.col-rsp-11 {width: (100% / 12) * 11};
+.col-rsp-12 {width: (100% / 12) * 12};
+
+/* STANDARD CLASS COMPONENTS */
+
+[class*='col-'] {
+  .col;
+}
+
+[class*='col-pull-'] {
+  .col;
+}
+
+[class*='col-push-'] {
+  .col;
+}
+
+[class*='col-offset-'] {
+  float: left;
+  display: block;
+  min-height: 1px;
+  position: relative;
+  &:before{
+    clear: both;
+  }
+  &:after{
+    .clear;
+  }
+}
+
+@iterations: 12;
+@single-col-width: 100% / @col-count;
+
+/*------------- GRID GENERATION -------------*/
+
+/*** EXTRA SMALL MOBILE ***/
+@media (min-width: @screen-xs-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-xs-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/*** MOBILE ***/
+@media (min-width: @screen-sm-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-sm-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/*** TABLET ***/
+@media (min-width: @screen-md-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-md-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/*** DESKTOP ***/
+@media (min-width: @screen-lg-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-lg-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/*** LARGE DESKTOP ***/
+@media (min-width: @screen-xl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-xl-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/*** EXTRA LARGE DESKTOP ***/
+@media (min-width: @screen-xxl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-xxl-@{i} {
+      width: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/******** PULL COLS ********/
+
+@media (min-width: @screen-xs-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-xs-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-sm-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-sm-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-md-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-md-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-lg-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-lg-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-xl-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xxl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-pull-xxl-@{i} {
+      right: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+
+/******** PUSH COLS ********/
+
+@media (min-width: @screen-xs-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-xs-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-sm-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-sm-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-md-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-md-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-lg-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-lg-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-xl-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xxl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-push-xxl-@{i} {
+      left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+/******** OFFSET COLS ********/
+
+@media (min-width: @screen-xs-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-xs-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-sm-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-sm-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-md-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-md-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-lg-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-lg-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-xl-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}
+
+@media (min-width: @screen-xxl-min-width) {
+
+  .col-loop (@i) when (@i > 0){
+    .col-offset-xxl-@{i} {
+      margin-left: (@single-col-width * @i);
+    }
+    .col-loop(@i - 1);
+  }
+  .col-loop(@iterations);
+}

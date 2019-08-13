@@ -1,0 +1,236 @@
+@import (reference) "../framework.less";
+
+.p-h-1{
+  .xl-text;
+  font-family: @font;
+  font-weight: 400;
+}
+
+.p-h-2{
+  .lg-text;
+  font-family: @font;
+  font-weight: 400;
+}
+
+@p-blue1: #00fff8;
+@p-blue2: #19b1e0;
+@p-blue3: #4865d3;
+@p-blue4: #444a87;
+
+@p-y1: #ffe200;
+@p-y2: #f7ca11;
+@p-y3: #fd9d04;
+@p-y4: #f2703d;
+
+.p-grad-yellow{
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#8e9aa5+0,afbfce+100 */
+  //background-color: @p-y1; /* Old browsers */
+  background-color: -moz-linear-gradient(90deg, @p-y4 25%, @p-y1 100%); /* FF3.6-15 */
+  background-color: -webkit-linear-gradient(90deg, @p-y4 25%, @p-y1 100%); /* Chrome10-25,Safari5.1-6 */
+  background-color: linear-gradient(90deg, @p-y4 25%,@p-y1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@p-y1', endColorstr='#5c6ac4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+
+#above-the-fold-2 {
+  //background: @p1;
+
+  .p-grad-yellow;
+  background: url('@{root}/img/orange-and-yellow-abstracts.svg');
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  height: 105vh;
+
+
+  #menu{
+    background: transparent;
+    justify-content: space-between;
+  }
+
+  .wrapper{
+    height: 70vh;
+    .flex(row, space-around);
+
+    #search-for-course{
+      width: 50%;
+      margin: 3rem;
+
+      h1{
+        .p-h-1;
+        color: @p-blue4;
+        margin-bottom: 2rem;
+      }
+
+      #main-search{
+
+        input{
+          border: 2px solid white;
+          border-radius: 999rem;
+        }
+      }
+    }
+
+    .courses{
+      width: 50%;
+
+      .course{
+        background: @p-blue2;
+        padding: 2rem;
+        border-radius: @border-radius;
+        margin-left: 10%;
+
+        max-width: 360px;
+        height: 50%;
+        .rotate(10deg);
+
+        .course-content{
+          .rotate(-10deg);
+          //display: flex;
+          flex-flow: column;
+          height: 300px;
+          padding-top: 3rem;
+          justify-content: space-around;
+
+          h2{
+            .lg-text;
+            font-family: @font;
+            font-weight: 400;
+            color: white;
+          }
+          h3{
+            .xxl-text;
+            font-family: @font;
+            font-weight: 400;
+            color: fade(white, 70%);
+            margin-top: 1rem;
+          }
+          h4{
+            .lg-text;
+            font-family: @font;
+            font-weight: 400;
+            font-style: italic;
+            color: white;
+          }
+
+          .p-button{
+            margin-top: 1rem;
+            padding: 1rem;
+          }
+        }
+      }
+
+      .slider{
+        display: flex;
+        width: 180px;
+        justify-content: space-between;
+        margin: -2.5rem auto 0;
+        .rotate(-10deg);
+
+        li{
+          width: 1rem;
+          height: 1rem;
+          display: block;
+          background: white;
+          border-radius: 999rem;
+          .scale(1);
+          .bezier-eas-in-slow(0.3s);
+          cursor: pointer;
+        }
+
+        li.selected, li:hover{
+          background: @p-blue1;
+          .scale(1.2)
+        }
+      }
+    }
+  }
+}
+
+#tanfolyamok-header{
+  .p-grad-yellow;
+  //height: 180px;
+  height: 360px;
+
+
+  background-image: url('@{root}/img/tanfolyamok-header.svg');
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+@grid-unit: 320px;
+
+.tanfolyam-grid{
+  margin-top: -220px;
+  position: relative;
+  z-index: 10;
+
+  ul{
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
+    li.unit{
+      display: flex;
+      flex-flow: column;
+      justify-content: space-between;
+
+      width: 280px;
+      margin: 0.5rem;
+      box-sizing: border-box;
+      //border: 1px solid @gray1;
+
+      border-radius: @border-radius;
+      overflow: hidden;
+      box-shadow: 0 0 20px fade(black, 15%);
+
+      .top{
+        background: inherit;
+        padding: 4rem 1rem 1rem;
+
+        h4{
+          margin: 1rem 0;
+          .p-h-2;
+        }
+
+        h2{
+          margin-bottom: 3rem;
+          .p-h-2;
+        }
+
+
+      }
+
+      .bottom{
+        padding: 1rem 1rem 3rem;
+
+        h3{
+          .lg-text;
+          font-family: @font;
+          margin: 0.5rem 0;
+        }
+        h4{
+          font-size: 1.4rem;
+          font-family: @font;
+          font-weight: 800;
+          font-style: italic;
+        }
+      }
+    }
+
+    li.unit.excel{
+      .top{
+        background: yellowgreen;
+      }
+    }
+
+    li.unit.wordpress{
+      .top{
+        background: @p-blue3;
+      }
+    }
+
+  }
+
+}

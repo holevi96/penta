@@ -1,0 +1,66 @@
+@import (reference) "grid-basics";
+@import (reference) "grid-units";
+
+.margin.taskPanel{
+  @media @xs, @sm   {margin: 20px 20px 0px 20px;}
+  @media @md, @lg   {margin: 20px 20px 0px 20px;}
+  @media @xl, @xxl  {margin: 20px 20px 0px 20px;}
+}
+
+.taskPanelGutter {
+  @media @xs, @sm {
+    //margin: 8px 8px 0px 8px;
+    margin-bottom: 16px;
+    padding: 16px;
+  }
+  @media @md {
+    //margin: 16px 16px 0px 16px;
+    margin-bottom: 18px;
+    padding: 18px;
+  }
+  @media @lg {
+    //margin: 16px 16px 0px 16px;
+    margin-bottom: 18px;
+    padding: 18px;
+  }
+  @media @xl {
+    //margin: 16px 16px 0px 16px;
+    margin-bottom: 24px;
+    padding: 24px;
+  }
+  @media @xxl {
+    //margin: 20px 20px 0px 20px;
+    margin-bottom: 32px;
+    padding: 32px;
+  }
+}
+
+.taskPanelGutter(@width: 10px;){
+  margin-bottom: @width;
+}
+
+.rspWhiteSpace {
+  box-sizing: border-box;
+  @media @xs, @sm {
+    //margin: 8px 0px 0px 8px;
+    padding: 16px;
+  }
+  @media @md {
+    //margin: 16px 0px 0px 16px;
+    padding: 18px;
+  }
+  @media @lg {
+    //margin: 16px 0px 0px 16px;
+    padding: 18px;
+  }
+  @media @xl {
+    //margin: 16px 0px 0px 16px;
+    padding: 24px;
+  }
+  @media @xxl {
+    //margin: 20px 0px 0px 20px;
+    padding: 32px;
+  }
+}
+
+

@@ -1,0 +1,129 @@
+@import (reference) "grid-basics";
+@import (reference) "grid-columns";
+@import (reference) "grid-units";
+
+
+@spacing-unit: 5px;
+
+/*
+@padding{
+
+@media  @xs  {@spacing-unit};
+@media  @sm  {@spacing-unit * 2};
+@media  @md  {@spacing-unit * 2};
+@media  @lg  {@spacing-unit * 3};
+@media  @xl  {@spacing-unit * 3};
+@media  @xxl {@spacing-unit * 4};
+
+}
+*/
+
+@gutter: 0px;
+@gutter-small: 0px;
+
+@container-xs:  100% - @gutter-small;
+@container-sm:  100% - @gutter-small;
+@container-md:  100% - @gutter-small;
+@container-lg:  1000px;
+@container-xl:  1200px;
+@container-xxl: 1300px;
+
+@center-container-xs:  100%;
+@center-container-sm:  100%;
+@center-container-md:  100%;
+@center-container-lg:  100%;
+@center-container-xl:  900px + @gutter;
+@center-container-xxl: 900px + @gutter;
+
+
+.general-container{
+
+  // Container General
+  //------------------
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 1px;
+
+  position: relative;
+
+  &:before{
+    clear: both;
+  }
+
+  &:after{
+    .clear;
+  }
+}
+
+
+.container-gutter{
+
+  // Container Gutters
+  //------------------
+  @media @xs {
+    padding-left:  @gutter-small / 2;
+    padding-right: @gutter-small / 2;
+  }
+
+  @media @sm {
+    padding-left:  @gutter-small / 2;
+    padding-right: @gutter-small / 2;
+  }
+
+  @media @md {
+    padding-left:  @gutter-small / 2;
+    padding-right: @gutter-small / 2;
+  }
+
+  @media @lg, @xl, @xxl {
+    padding-left:  @gutter / 2;
+    padding-right: @gutter / 2;
+  }
+}
+
+.fluid-container{
+  .general-container;
+  .container-gutter;
+
+  // Container Width
+  //---------------
+  @media @xs     {width: @container-xs}
+  @media @sm     {width: @container-sm}
+  @media @md     {width: @container-md}
+  @media @lg     {width: @container-lg}
+  @media @xl     {width: @container-xl}
+  @media @xxl    {width: @container-xxl}
+}
+
+
+.center-container(@center-container-md, @container-lg, @center-container-xl, @center-container-xxl){
+  .general-container;
+
+  // Container Width
+  //---------------
+  @media @xs     {width: 100%}
+  @media @sm     {width: 100%}
+  @media @md     {width: @center-container-md}
+  @media @lg     {width: @container-lg}
+  @media @xl     {width: @center-container-xl}
+  @media @xxl    {width: @center-container-xxl}
+}
+
+/*
+.fluid-container {
+  @media @xs  {width: @center-container-xs; min-width: @screen-xs-min-width;}
+  @media @sm  {width: @center-container-xs;}
+  @media @md  {width: @center-container-md;}
+  @media @lg  {width: @center-container-lg;}
+  @media @xl  {width: @center-container-xl;}
+  @media @xxl {width: @center-container-xxl;}
+
+  box-sizing: border-box;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: (@gutter / 2);
+  padding-right: (@gutter / 2);
+}
+*/

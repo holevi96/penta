@@ -1,0 +1,27 @@
+@import (reference) "grid-basics";
+@import (reference) "grid-units";
+
+.rsp-height(@mobile-height, @desktop-height){
+  @media @xs {height: @mobile-height;}
+  @media @sm {height: @mobile-height;}
+  @media @md {height: @mobile-height;}
+  @media @lg {height: @desktop-height;}
+  @media @xl {height: @desktop-height;}
+  @media @xxl{height: @desktop-height;}
+}
+
+.rsp-width(
+  @xs-width,
+  @sm-width,
+  @md-width,
+  @lg-width,
+  @xl-width,
+  @xxl-width)
+  {
+  @media @xs {width: @xs-width;}
+  @media @sm {width: @sm-width;}
+  @media @md {width: @md-width;}
+  @media @lg {width: @lg-width;}
+  @media @xl {width: @xl-width;}
+  @media @xxl{width: @xxl-width;}
+}

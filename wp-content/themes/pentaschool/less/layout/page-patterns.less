@@ -1,0 +1,236 @@
+@import (reference) "../framework.less";
+@import (reference) "../components.less";
+
+.small-head-background{
+  position: relative;
+  background: url('@{root}/img/penta-header-smaller.svg');
+  background-repeat: no-repeat;
+}
+
+#breadcrumb{
+
+  ul{
+    .flex(row, flex-start);
+    padding: 0.5rem 0;
+
+    li{
+      .md-text;
+      color: @brown0;
+      position: relative;
+      margin-right: 2rem;
+
+      &:after{
+        content: 'keyboard_arrow_right';
+        font-family: material-icons;
+        color: @brown0;
+        padding: 0 .5rem;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 0;
+        display: flex;
+        align-items: center;
+        right: -2rem;
+
+      }
+    }
+  }
+}
+
+body{
+  h1.p-section-title{
+    height: 10rem;
+    //display: flex;
+    //justify-content: space-between;
+    //flex-flow: column;
+    //align-items: flex-start;
+  }
+}
+
+.category-tag{
+  .sm-text;
+  text-transform: uppercase;
+  font-weight: 800;
+  padding: 0.6rem 1rem;
+  border: 2px solid;
+  border-radius: @border-radius;
+
+ /* @adatbazis: #39B166;
+  @iroda: #635344;
+  @programozas: #F2613B;
+  @rendszergazda: @p-y3;
+  @web: @p-b3;
+
+  &.adatbazis{
+    color: @adatbazis;
+    border-color: @adatbazis;
+  }
+  &.iroda{
+    color: @iroda;
+    border-color: @iroda;
+  }
+  &.programozas{
+    color: @programozas;
+    border-color: @programozas;
+  }
+  &.rendszergazda{
+    border-color: @rendszergazda;
+    color: @rendszergazda;
+  }
+  &.web{
+    border-color: @web;
+    color: @web;
+  }*/
+}
+.kapcsolat-page{
+	iframe{
+		margin-top:3rem;
+	}
+}
+#kapcsolat{
+margin-top:-5px;
+padding-top:20px;
+background:@p-y1;
+	.pnt-container>div{
+		    display: flex;
+			flex-flow: row;
+			justify-content: center;
+			align-items:center;
+			@media @xs,@sm,@md{
+					display:block;
+			}
+		.szoveg{
+			width:60%;
+			@media @xs,@sm,@md{
+				width:100%;
+			}
+		}
+		textarea{
+			position: relative;
+			top: 28px;
+			height: 142px;
+			width: 89%;
+			border-radius: 3px;
+		}
+		.gfield_html_formatted{
+			margin-left:0px !important;
+		}
+		.ginput_recaptcha{
+			margin-left: 0px !important;
+			position: relative;
+			
+		}
+		#gform_submit_button_10{
+			background:@brown0;
+			margin-left: 10px;
+			margin-top: -10px;
+			margin-bottom: 20px;
+		}
+		.gfmc-column{
+			    padding-left: 10px;
+			    padding-right: 10px;
+				box-sizing: border-box;
+		}
+	}
+	h2{
+		font-size:2.5rem;
+		margin-bottom:30px;
+		font-weight:600;
+		color:@brown0;
+	}
+	h3{
+		.lg-text;
+		color:@brown0;
+	}
+	p{
+		.md-text;
+		color:@brown0;
+	}
+}
+#footer_bottom{
+background:@brown1;
+padding:40px 0px;
+	.pnt-container{
+		&>ul{
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			@media @sm,@xs{
+				display:block;
+			}
+			li{
+				h3{
+							color:@p-y1;
+							.md-text;
+							text-transform:uppercase;
+							text-decoration:underline;
+							margin-bottom:10px;
+							margin-top:13px;
+				}
+				p{
+					color:#fff;
+				}
+				ul{
+				
+					li{
+					padding-top:5px;
+						a{
+							color:#fff;
+						}
+
+					}
+				}
+			}
+		}
+	}
+	.links{
+		display: flex;
+		flex-flow: row;
+		justify-content: space-between;
+		@media @sm,@xs{
+			display:block;
+		}
+		margin-top:30px;
+		img{
+			width:200px;
+			margin-left: -30px;
+			@media @sm,@xs{
+				margin-left: 0px;
+			}
+		}
+
+		ul{
+		margin-top:15px;
+			li{
+				padding-top:7px;
+				float:left;
+				padding-left:15px;
+				@media @xs,@sm{
+					padding-left: 0 !important;
+				}
+				a{
+					color:#fff;
+				}
+				&.english{
+					padding-left: 75px;
+					position: relative;
+					&:before{
+						@media @xs,@sm{
+							display:none;
+						}
+						display: block;
+						content: "";
+						width: 38px;
+						height: 19px;
+						background: url(../img/flag.png);
+						position: absolute;
+						left: 25px;
+						top: 3px;
+						background-size: cover !important;
+					}
+				}
+			}
+		}
+	}
+}

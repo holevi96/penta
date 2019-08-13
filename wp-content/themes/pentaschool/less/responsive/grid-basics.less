@@ -1,0 +1,156 @@
+/* BRAKEPOINT VARIABLES  */
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+~"only screen and (min-device-pixel-ratio: 1.5)";
+
+/*
+@xs:      ~"only screen and (min-width: 1px) and (max-width: 528px)";
+@sm:      ~"only screen and (min-width: 529px) and (max-width: 740px)";
+@md:      ~"only screen and (min-width: 741px) and (max-width: 980px)";
+@lg:      ~"only screen and (min-width: 981px) and (max-width: 1360px)";
+@xl:      ~"only screen and (min-width: 1361px) and (max-width: 1600px)";
+@xxl:     ~"only screen and (min-width: 1601px)";
+*/
+
+@xs:      ~"only screen and (min-width: 1px) and (max-width: 320px)";
+@sm:      ~"only screen and (min-width: 321px) and (max-width: 740px)";
+@md:      ~"only screen and (min-width: 741px) and (max-width: 980px)";
+@lg:      ~"only screen and (min-width: 981px) and (max-width: 1360px)";
+@xl:      ~"only screen and (min-width: 1361px) and (max-width: 1600px)";
+@xxl:     ~"only screen and (min-width: 1601px)";
+
+@extraSmallHeight: ~"only screen and (min-height: 0px) and (max-height: 600px)";
+@smallHeight:   ~"only screen and (min-height: 601px) and (max-height: 700px)";
+@mediumHeight:  ~"only screen and (min-height: 701px) and (max-height: 800px)";
+@largeHeight:   ~"only screen and (min-height: 801px)";;
+
+// mobile-xs
+@screen-xs-min-width: 0px;
+@screen-xs-max-width: 528px - @gutter;
+
+// mobile
+@screen-sm-min-width: (@screen-xs-max-width + 1);
+@screen-sm-max-width: 740px - @gutter;
+
+// tablet
+@screen-md-min-width: (@screen-sm-max-width + 1);
+@screen-md-max-width: 980px - @gutter;
+
+// desktop
+@screen-lg-min-width: (@screen-md-max-width + 1);
+@screen-lg-max-width: 1360px - @gutter;
+
+// large desktop
+@screen-xl-min-width: (@screen-md-max-width + 1);
+@screen-xl-max-width: 1600px - @gutter;
+
+// extra large desktop
+@screen-xxl-min-width: (@screen-xl-max-width + 1);
+
+@col-count: 12px;
+
+/*** --- BASIC CLASSES ---***/
+
+.clear{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+// COL
+.col{
+
+  float: left;
+  display: block;
+  min-height: 1px;
+  box-sizing: border-box;
+  position: relative;
+
+  &:before{
+    clear: both;
+  }
+
+  &:after{
+    .clear;
+  }
+
+  //padding-left:  @gutter / 2;
+  //padding-right: @gutter / 2;
+}
+
+// ROW
+.row{
+  .col;
+  width: 100%;
+}
+
+.gutter{
+  padding-left:  @gutter / 2;
+  padding-right: @gutter / 2;
+}
+
+.no-gutter{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.mobile{
+  @media @xs, @sm, @md{
+    display: block !important;
+  }
+
+  @media @lg, @xl, @xxl{
+    display: none !important;
+  }
+}
+
+.desktop{
+  @media @xs, @sm, @md{
+    display: none !important;
+  }
+
+  @media @lg, @xl, @xxl{
+    display: block !important;
+  }
+}
+
+.xs(@xs-width) {
+  @media @xs {
+    width: @xs-width;
+  }
+}
+
+.sm(@sm-width) {
+  @media @xs {
+    width: @sm-width;
+  }
+}
+
+.md(@md-width) {
+  @media @xs {
+    width: @md-width;
+  }
+}
+
+.lg(@lg-width) {
+  @media @xs {
+    width: @lg-width;
+  }
+}
+
+.xl(@xl-width) {
+  @media @xl {
+    width: @xl-width;
+  }
+}
+
+.xxl(@xxl-width) {
+  @media @xl {
+    width: @xxl-width;
+  }
+}
