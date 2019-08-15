@@ -10,7 +10,10 @@
               'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
               'compare' => 'LIKE'
           )
-      )
+      ),
+      'meta_key'			=> 'kezdes',
+      'orderby'			=> 'meta_value',
+      'order'				=> 'ASC'
 
   ));
    if($kiirasok): 
@@ -67,7 +70,36 @@
             </div>			
                 <div class="tanfolyam-full-details wyswyg-content">
                     <div class="header">
+                        <div class="alkalmak desktop clearfix">
+                            <div>
+                                <h3>Óraszám:</h3>
+                                <h2><?php echo get_field('oraszam',$kapcs_tanf); ?></h2>
+                            </div>
+                            <?php if($kezdet_veg == true){ ?>
+                                <div>
+                                    <h3>Heti beosztás:</h3>
+                                    <h2><?php echo $heti_beosztas; ?></h2>
+                                </div>
+                                <div>
+                                    <h3>Napi beosztás:</h3>
+                                    <h2><?php echo $idobeosztas; ?></h2>
+                                </div>
+                            <?php }else{ ?>
+                                <div>
+                                    <h3>Napi beosztás:</h3>
+                                    <h2><?php echo $idobeosztas; ?></h2>
+                                </div>
+                            <?php } ?>
+                            <div>
+                                <h3>Oktató:</h3>
+                                <h2><?php echo get_post(get_field('tanar',$kiiras->ID)[0])->post_title; ?></h2>
+                            </div>
+                            <div class="">
+                                <h3>Helyszín:</h3>
+                                <h2><a href="<?php echo get_permalink(get_post(get_field('helyszin',$kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?><</a>/h2>
+                            </div>
 
+                        </div>
                         <div class="icons">
                             <div>
                                 <i class="material-icons">person</i>
@@ -75,7 +107,8 @@
                             </div>
                             <div>
                                 <i class="material-icons">place</i>
-                                <span><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?></span>
+                                <span><a href="<?php echo get_permalink(get_post(get_field('helyszin',$kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?><</a></span>
+
                             </div>
                             <div>
 							<?php $napszak = get_field('napszak', $kiiras->ID);
@@ -143,7 +176,7 @@
 							</div>
 							<div class="">
 								<h3>Helyszín:</h3>
-								<h2><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?></h2>
+                                <h2><a href="<?php echo get_permalink(get_post(get_field('helyszin',$kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?></a></h2>
 							</div>
 					
 					</div>

@@ -17,6 +17,7 @@ function penta_scripts() {
 	wp_enqueue_script( 'flickity.js', '//unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'single-tanfolyamok.js', get_stylesheet_directory_uri() . '/js/single-tanfolyamok.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'tematikajs.js', get_stylesheet_directory_uri() . '/js/tematikajs.js', array( 'jquery' ), false, true );
+
  }
  if(get_post($post)->post_name === "rolunk"){
      wp_enqueue_script( 'tematikajs.js', get_stylesheet_directory_uri() . '/js/tematikajs.js', array( 'jquery' ), false, true );

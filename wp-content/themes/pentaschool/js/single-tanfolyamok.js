@@ -111,4 +111,26 @@ jQuery(document).ready(function(){
 	
 	jQuery("#field_1_43>label").html('Efogadom az <a href="#" name="terms" target="_blank">adatvédelmi nyilatkozatot.</a>');
 	jQuery("#field_1_60>label").html('Elfogadom az <a href="#" name="terms" target="_blank">adatkezelési szabályzatot.</a>');
-})
+
+
+
+	jQuery('#printTematika').click(function () {
+		var el = "tematika";
+
+		if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+			jQuery('#tematika').contents().find("i,span.unfold").hide();
+
+			jQuery("#print-iframe").contents().find('body').html(jQuery('#tematika').html())
+			parent.document.getElementsByName("pdfjs-frame")[0].contentWindow.document.execCommand("print", false, null);
+			jQuery('#tematika').contents().find("i,span.unfold").show();
+		}else{
+			var restorepage = jQuery('body').html();
+			var printcontent = jQuery('#' + el).addClass('print').clone();
+			jQuery('body').empty().html(printcontent);
+			window.print();
+			jQuery('body').html(restorepage);
+		}
+
+
+	})
+});

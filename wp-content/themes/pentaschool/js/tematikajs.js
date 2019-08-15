@@ -13,7 +13,7 @@ jQuery(document).ready(function(){
         setTematikaIcons(container)
     });
     jQuery('.unfold i').click(function(){
-        var container = jQuery(this).parent().parent().parent().find(".tematika-lista");
+        var container = jQuery(this).parent().parent().parent().parent().find(".tematika-lista");
 
         if(jQuery(this).text() == 'unfold_less'){
             jQuery(this).text('unfold_more')

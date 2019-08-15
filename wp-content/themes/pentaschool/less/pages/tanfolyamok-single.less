@@ -39,7 +39,7 @@ body#mobile{
   background-color: @p-bg;
 
   @media @xxl, @xl, @lg{
-    background-position: -10px 50%;
+    //background-position: -10px 50%;
   }
 		#video-view{
 			position: absolute;
@@ -105,9 +105,12 @@ body#mobile{
 
       @media @md, @lg{
         width: 100%;
+        height: 100%;
       }
 .image-wrapper{
 			position:relative;
+  display: flex;
+  justify-content: space-around;
 			a.popup{
 				position: absolute;
 				top: 42%;
@@ -218,7 +221,7 @@ body#mobile{
 
       h1 {
         .lg-text;
-        color: white;
+        color: @brown0;
         font-family: @font;
 		margin-bottom:15px;
       }
@@ -241,8 +244,9 @@ body#mobile{
     @media @lg, @xl, @xxl{
       background: white;
       width: 100%;
+      //height: 100%;
       display: flex;
-      flex-flow: wrap;
+      flex-flow: column;
       justify-content: space-between;
       box-sizing: border-box;
       padding: 1.4rem;
@@ -301,6 +305,7 @@ body#mobile{
 		padding-bottom:15px;
 		background:#fff;
 		padding-left:10px;
+      border-bottom: 1px solid #ccc;
 		@media @xs,@sm{
 			padding-top:0px;
 		}
@@ -313,6 +318,10 @@ body#mobile{
 			}
 			h2{
 				.md-text;
+              a{
+                color:#000;
+                text-decoration: underline;
+              }
 			}
 		}
 	}
@@ -500,11 +509,14 @@ body#mobile{
 
     box-sizing: border-box;
     padding: 4rem 5rem;
-
+    @media @xs, @sm,@md{
+      padding:3rem 2rem;
+    }
     z-index: 100;
 
     left: -9999rem;
     top: -9999rem;
+
 	button{
 		position:relative;
 	    padding: .5rem;
@@ -534,7 +546,8 @@ body#mobile{
 	}
     .header{
       .flex(row, space-between);
-
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 2rem;
       .icons{
         .flex(row, flex-start);
         @media @xs,@md,@sm{
@@ -555,13 +568,33 @@ body#mobile{
           }
         }
       }
-
+      .alkalmak{
+        margin-top: -10px;
+        padding-top: 0px;
+        padding-bottom:15px;
+        background:#fff;
+        padding-left:10px;
+        @media @xs,@sm{
+          padding-top:0px;
+        }
+        div{
+          float: left;
+          margin-right: 30px;
+          //margin-top:15px;
+          h3{
+            .sm-text;
+          }
+          h2{
+            .md-text;
+          }
+        }
+      }
       .close{
         .active-icons;
 		@media @xs,@sm,@md{
-			position: relative;
-			top: -50px;
-			right: 20px;
+          position: absolute;
+          top: -42px;
+          right: 0;
 		}
       }
     }
@@ -625,9 +658,9 @@ body#mobile{
       height: 500px;
 
       img{
-        
-            width: auto;
-    height: 100%;
+
+
+        //width: 100%;
       }
     }
   }
@@ -707,7 +740,7 @@ body#mobile{
 
 @neked-height: 4rem;
 
-.pro-contra{
+.pro-contra-wrapper{
 
   &.pro{
     i{
@@ -741,7 +774,9 @@ body#mobile{
 }
 
 #neked-ajanljuk{
-
+  @media @xs, @sm, @md{
+    margin-top: 40px;
+  }
   @media @xxl, @xl, @lg{
     //background: white;
   }
@@ -762,6 +797,7 @@ body#mobile{
       @media @xs, @sm, @md{
         border-bottom: 5px solid white;
         background: white;
+        padding: 0.5rem;
         justify-content: center;
         .md-text;
 		padding-left:20px;
@@ -821,6 +857,7 @@ body#mobile{
 
         li{
           margin: 1rem 1.5rem;
+          padding: 1rem;
         }
       }
 
@@ -873,7 +910,7 @@ body#mobile{
     @media @md, @lg, @xl, @xxl{
       box-sizing: border-box;
       padding: 0rem 4rem;
-      max-width: 900px;
+      //max-width: 900px;
       margin: 0 auto;
     }
 
@@ -890,6 +927,10 @@ body#mobile{
 
       i{
         margin-left: 1rem;
+
+        @media @md, @lg, @xl, @xxl{
+          margin-right: 2rem;
+        }
         .active-icons;
       }
     }
@@ -901,7 +942,7 @@ body#mobile{
       box-sizing: border-box;
       padding: 2rem 4rem;
 
-      max-width: 900px;
+      //max-width: 900px;
       margin: 0 auto;
     }
 
@@ -912,6 +953,9 @@ body#mobile{
 
       @media @sm, @xs{
         .flex(column, flex-start);
+        ul{
+          padding-left: 2rem;
+        }
       }
 
       @media @md, @lg, @xl, @xxl{
@@ -1005,6 +1049,30 @@ body#mobile{
         visibility: visible;
         opacity: 1;
       }
+    }
+  }
+  #print-iframe{
+    height: 0;
+    visibility: hidden;
+  }
+  .print-title{
+    display:none;
+  }
+  &.print{
+    .print-title{
+      display:block;
+    }
+    li{
+      span h2{
+        font-size:14px !important;
+        margin: 0;
+        padding:0;
+      }
+    }
+    div ul li, div p{
+      font-size:12px !important;
+      margin: 0;
+      padding:0;
     }
   }
 }

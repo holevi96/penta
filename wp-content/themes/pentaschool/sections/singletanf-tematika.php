@@ -1,14 +1,22 @@
 <?php $tematika = get_field('tematika');
 if($tematika): ?>    
 	<section id="tematika">
+        <iframe name="pdfjs-frame" id="print-iframe" frameborder="0"></iframe>
         <div class="pnt-container">
-
+            <h1 class="print-title"><?php the_title(); ?></h1>
             <div class="tematika-header">
+
                 <h2>Tematika</h2>
-                <span class="unfold">
-                    <span>Összeset becsuk</span>
-                    <i class="material-icons">unfold_less</i>
+
+
+                <span>
+                    <i class="material-icons desktop" id="printTematika">print</i>
+                    <span class="unfold">
+                        <span>Összeset becsuk</span>
+                        <i class="material-icons">unfold_less</i>
+                    </span>
                 </span>
+
             </div>
 
             <ul class="tematika-lista">

@@ -163,8 +163,8 @@ if (!empty($categories)):
                         ?>
                     </div>
                     <div class="title">
-                        <span class="category-tag <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></span>
                         <h2><?php echo get_post($kapcs_tanf)->post_title; ?></h2>
+                        <span class="category-tag <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></span>
                     </div>
 
                     <div>
@@ -197,11 +197,13 @@ if (!empty($categories)):
                 <div class="quick-view">
                     <div class="closer">></div>
                     <div class="date desktop">
-                        <?php if ($date) { ?>
-                            <h4><?php echo date('Y', strtotime($date)); ?></h4>
-                            <h3><?php echo $honapok_teljes[date('n', strtotime($date))]; ?></h3>
-                            <h2><?php echo date('j', strtotime($date)); ?></h2>
-                        <?php } ?>
+                        <div>
+                            <?php if ($date) { ?>
+                                <h4><?php echo date('Y', strtotime($date)); ?></h4>
+                                <h3><?php echo $honapok_teljes[date('n', strtotime($date))]; ?></h3>
+                                <h2><?php echo date('j', strtotime($date)); ?></h2>
+                            <?php } ?>
+                        </div>
                     </div>
 
                     <div class="date mobile">
@@ -211,7 +213,7 @@ if (!empty($categories)):
                     <div class="content">
                         <div class="fullwidth title">
                             <h2><?php echo get_post($kapcs_tanf)->post_title; ?></h2>
-
+                            <a class="desktop" href="/tanfolyamok?termname=<?php echo $cat_slug; ?>"><span class="category-tag <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></span></a>
                         </div>
                         <?php if($date): ?>
                             <div class="fullwidth details clearfix">
@@ -279,15 +281,19 @@ if (!empty($categories)):
                                 <?php if(!$date):?>
                                     <h3>Nincs aktuális időpont!</h3>
                                 <?php endif; ?>
-                                <?php if ($date): ?>
-                                    <?php if ($van_e_akcio): ?>
-                                        <h2 class="final-price">Ár: <?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
-                                    <?php else: ?>
-                                        <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
-                                    <?php endif; ?>
-                                <?php endif; ?>
                                 <div>
-                                    <a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button white medium">Részletek</a>
+                                    <?php if ($date): ?>
+                                        <?php if ($van_e_akcio): ?>
+                                            <h2 class="final-price">Ár: <?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
+                                            <h4 class="discounted desktop"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h4>
+                                        <?php else: ?>
+                                            <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
+                                        <?php endif; ?>
+                                    <?php endif; ?>
+                                </div>
+
+                                <div>
+                                    <a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button ghost white medium">Részletek</a>
                                     <?php if(!$is_full && $date){ ?>
                                         <a href="<?php echo get_permalink($kapcs_tanf). '?jelentkezes&ID='.$kiiras->ID; ?>?jelentkezes" class="p-button orange medium">Jelentkezés</a>
                                     <?php }else if($is_full && $date){ ?>

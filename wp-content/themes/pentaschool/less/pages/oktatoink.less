@@ -11,18 +11,21 @@
   .oktatoink-lista{
 
     &>ul{
-      display: flex;
-      flex-wrap: wrap;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(400px,auto);
+      display: grid;
       margin: 0 -0.5rem;
-
+      @media @xs, @sm{
+        display:block;
+      }
       &>li{
-        @media @xs, @sm, @md, @lg{
-          width: 100% / 1;
-        }
-
-        @media @xl, @xxl{
-          width: 100% / 2;
-        }
+        //@media @xs, @sm, @md, @lg{
+        //  width: 100% / 1;
+        //}
+        //
+        //@media @xl, @xxl{
+        //  width: 100% / 2;
+        //}
 
 		padding: .5rem;
 		box-sizing: border-box;
@@ -32,17 +35,18 @@
 			background: white;
 			display: flex;
 			flex-flow: column;
-			justify-content: space-between;
+          justify-content: flex-start;
+          height: 100%;
 			overflow: hidden;
           .image-wrapper{
-            width: 770px;
-            height: 100%;
+            height: auto;
             overflow: hidden;
             padding: 0;
 
             img{
-              width: 250px;
-              height: auto;
+              width: 100%;
+              height:auto;
+
             }
           }
 

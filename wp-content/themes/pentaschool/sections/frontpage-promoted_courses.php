@@ -16,7 +16,7 @@
 							<?php if(!$is_full){ ?>
 							<a class="p-button invisible yellow medium"href="<?php echo get_permalink(get_field('kapcsolodo_tanf',$kiemelt)[0]); ?>?jelentkezes&ID=<?php echo $kiemelt; ?>">Jelentkezem</a>
 							<?php }else{ ?>
-							<a href="<?php echo get_permalink(get_field('kapcsolodo_tanf',$kiemelt)[0]); ?>?varolista&ID=<?php echo $kiemelt; ?>">Jelentkezem</a>
+							<a class="p-button invisible yellow medium" href="<?php echo get_permalink(get_field('kapcsolodo_tanf',$kiemelt)[0]); ?>?varolista&ID=<?php echo $kiemelt; ?>">Jelentkezem</a>
 							<?php } ?>
 						</div>
                         
