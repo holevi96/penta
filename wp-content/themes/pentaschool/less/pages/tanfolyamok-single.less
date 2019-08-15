@@ -548,11 +548,14 @@ body#mobile{
       .flex(row, space-between);
       border-bottom: 1px solid #ccc;
       margin-bottom: 2rem;
+
       .icons{
         .flex(row, flex-start);
         @media @xs,@md,@sm{
           display:none;
         }
+        border-left:1px solid #ccc;
+        padding-left:2rem;
         div{
           margin:  0 1rem 0 0;
           .flex(row, flex-start);

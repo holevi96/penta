@@ -3,20 +3,7 @@
 
 <?php include 'inc/menu.php'; ?>
 
-			<?php
-        $refs = get_posts(array(
-            "post_type"=>'referenciak',
-            'numberposts' => -1
-        ));
-        $cats = array();
-        $years = array();
-        foreach ($refs as $ref) {
-            $cats[] = get_field('kategoria', $ref->ID);
-            $years[] = get_field('ev', $ref->ID);
-        }
-        $cats = array_unique($cats);
-        $years = array_unique($years);
-            ?>
+    
 <iframe src="https://snazzymaps.com/embed/128072" width="100%" height="300px" style="border:none;"></iframe>
     
 		
@@ -27,8 +14,21 @@
 			<div class="szoveg">
 				<h2>Kapcsolat</h2>
 				<p>&copy; Pentaschool Bt.<br>
-				Cím: 1051 Budapest, Sas utca 25, VI. em.<br>
-				Telefon: (1)-472-0679 Fax: (1)-472-0680<br>
+				<a href="/helyszin/budapest">Cím: 1051 Budapest, Sas utca 25, VI. em.</a><br>
+                    Telefon: (1)-472-0679<br>
+
+                    <a class="social" href="https://www.facebook.com/pentaschool/">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook-logo.svg" alt="">
+                        <span>Pentaschool</span>
+                    </a>
+
+                    <a class="social" href="https://www.facebook.com/ExcelBazis/">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/facebook-logo.svg" alt="">
+                        <span>Excel bázis</span>
+                    </a>
+
+
+
 				</p>
 			</div>
 			<?php  echo do_shortcode('[gravityform id="10" title="false" description="true" ajax="false"]'); ?>

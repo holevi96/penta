@@ -3,19 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0c99dd5f-cf49-4de4-bc4b-e2ec44bf5b79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/archive-tanfolyamok.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/archive-tanfolyamok.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/js/single-tanfolyamok.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/js/single-tanfolyamok.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/js/tematikajs.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/js/tematikajs.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-main_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-main_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-promoted_courses.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-promoted_courses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-calltoaction.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-calltoaction.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-tematika.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-tematika.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,28 +22,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/archive-tanfolyamok.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="295" column="152" selection-start-line="295" selection-start-column="152" selection-end-line="295" selection-end-column="152" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/js/single-tanfolyamok.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="127" column="65" selection-start-line="127" selection-start-column="65" selection-end-line="127" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="424">
-              <caret line="314" column="28" selection-start-line="314" selection-start-column="28" selection-end-line="314" selection-end-column="28" />
+            <state relative-caret-position="335">
+              <caret line="546" column="12" lean-forward="true" selection-start-line="546" selection-start-column="12" selection-end-line="546" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -61,11 +39,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state relative-caret-position="421">
+              <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="721">
+              <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-calltoaction.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -80,37 +76,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-tematika.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="26" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="178" column="200" selection-start-line="178" selection-start-column="200" selection-end-line="178" selection-end-column="200" />
+            <state relative-caret-position="545">
+              <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
+              <folding>
+                <element signature="e#2951#4576#0#HTML" />
+                <element signature="e#4643#4663#0#HTML" expanded="true" />
+                <element signature="e#4724#5715#0#HTML" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="477">
+              <caret line="181" column="12" lean-forward="true" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/single-tanfolyamok.php">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="41" />
+            <state relative-caret-position="323">
+              <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/js/tematikajs.js">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+            <state relative-caret-position="312">
+              <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -126,10 +127,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.tematika-lista</find>
-      <find>setTematikaIcons</find>
-      <find>mutual-bg</find>
-      <find>orange-and-yellow-abstracts</find>
       <find>#temai</find>
       <find>ghost</find>
       <find>fade(#fff,70%)</find>
@@ -144,7 +141,6 @@
       <find>17px</find>
       <find>alka</find>
       <find>neked-ajanljuk</find>
-      <find>header</find>
       <find>scale</find>
       <find>tematika-header</find>
       <find>#tanfolyam-deta</find>
@@ -155,7 +151,12 @@
       <find>tanfolyam-full-details</find>
       <find>hely</find>
       <find>oktatoink</find>
+      <find>#referenciak-table</find>
+      <find>#kapcsolat{</find>
       <find>alkalmak</find>
+      <find>#kapcsolat</find>
+      <find>Részletek</find>
+      <find>header</find>
     </findStrings>
     <replaceStrings>
       <replace>fade(#fff,50%)</replace>
@@ -168,13 +169,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/sing-up-form.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/container.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/archive-tanarok.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/footer.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/index.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/page-rolunk.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/page-penta-referenciak.php" />
@@ -188,7 +186,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-active_courses.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/home-page.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-nekedajanljuk.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/archive-tanfolyamok.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-promoted_courses.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-main_categories.php" />
@@ -196,10 +193,15 @@
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/js/tematikajs.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/js/single-tanfolyamok.js" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-tematika.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/rolunk.less" />
         <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-calltoaction.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less" />
+        <option value="$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php" />
       </list>
     </option>
   </component>
@@ -275,7 +277,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565880776360" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565890711226" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/PPKE - Java Repo/hf1" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -322,7 +324,7 @@
       <workItem from="1553516984639" duration="16000" />
       <workItem from="1565348996593" duration="1566000" />
       <workItem from="1565695161189" duration="5389000" />
-      <workItem from="1565855892827" duration="20158000" />
+      <workItem from="1565855892827" duration="25225000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1565696384240</created>
@@ -366,11 +368,18 @@
       <option name="project" value="LOCAL" />
       <updated>1565865592778</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Nagy haladások 2">
+      <created>1565880926563</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1565880926563</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55255000" />
+    <option name="totallyTimeSpent" value="60322000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -399,9 +408,9 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.20578778" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.20578778" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32934928" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -427,7 +436,8 @@
     <MESSAGE value="tanfolyam leiras modal fixed" />
     <MESSAGE value="tematika js fixed" />
     <MESSAGE value="nagy haladások" />
-    <option name="LAST_COMMIT_MESSAGE" value="nagy haladások" />
+    <MESSAGE value="Nagy haladások 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nagy haladások 2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/sing-up-form.less">
@@ -446,13 +456,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-filter.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3553">
-          <caret line="209" column="47" selection-start-line="209" selection-start-column="47" selection-end-line="209" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/footer.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -478,13 +481,6 @@
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/single-page.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -492,17 +488,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/inc/menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="487">
@@ -611,13 +597,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1077">
-          <caret line="161" column="13" selection-start-line="161" selection-start-column="4" selection-end-line="161" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/frontpage-promoted_courses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -674,13 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="178" column="200" selection-start-line="178" selection-start-column="200" selection-end-line="178" selection-end-column="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/rolunk.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1529">
@@ -695,17 +667,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="314" column="28" selection-start-line="314" selection-start-column="28" selection-end-line="314" selection-end-column="28" />
+        <state relative-caret-position="421">
+          <caret line="33" column="31" lean-forward="true" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/oktatoink.less">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/single-page.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        <state relative-caret-position="721">
+          <caret line="112" column="44" selection-start-line="112" selection-start-column="44" selection-end-line="112" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-calltoaction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/dist/proto.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret column="38354" selection-start-column="38354" selection-end-column="38354" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/page-kapcsolat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="81" selection-start-line="19" selection-start-column="81" selection-end-line="19" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/layout/page-patterns.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="109" column="42" selection-start-line="109" selection-start-column="42" selection-end-line="109" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/pages/tanfolyamok-single.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="546" column="12" lean-forward="true" selection-start-line="546" selection-start-column="12" selection-end-line="546" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/sections/singletanf-kiirasok.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
+          <folding>
+            <element signature="e#2951#4576#0#HTML" />
+            <element signature="e#4643#4663#0#HTML" expanded="true" />
+            <element signature="e#4724#5715#0#HTML" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/less/components/button.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="181" column="12" lean-forward="true" selection-start-line="181" selection-start-column="12" selection-end-line="181" selection-end-column="12" />
         </state>
       </provider>
     </entry>

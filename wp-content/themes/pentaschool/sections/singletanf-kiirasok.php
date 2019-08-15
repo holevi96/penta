@@ -67,15 +67,16 @@
                    <!-- <button class="jelentkezes"><a href="?<?php echo ($is_full==false)?'jelentkezes':'varolista'; ?>&ID=<?php echo $kiiras->ID; ?>"><?php echo ($is_full==false)?'Jelentkezek':'Várólistára jelentkezek'; ?></a></button>
                     <button class="ceges-ajanlat"><a href="<?php echo get_permalink(); ?>?varolista&ID=<?php echo $kiiras->ID; ?>">Céges ajánlatot kérek</a></button>-->
                 </div>
-            </div>			
+            </div>
                 <div class="tanfolyam-full-details wyswyg-content">
                     <div class="header">
+
                         <div class="alkalmak desktop clearfix">
                             <div>
                                 <h3>Óraszám:</h3>
-                                <h2><?php echo get_field('oraszam',$kapcs_tanf); ?></h2>
+                                <h2><?php echo get_field('oraszam', $kapcs_tanf); ?></h2>
                             </div>
-                            <?php if($kezdet_veg == true){ ?>
+                            <?php if ($kezdet_veg == true) { ?>
                                 <div>
                                     <h3>Heti beosztás:</h3>
                                     <h2><?php echo $heti_beosztas; ?></h2>
@@ -84,7 +85,7 @@
                                     <h3>Napi beosztás:</h3>
                                     <h2><?php echo $idobeosztas; ?></h2>
                                 </div>
-                            <?php }else{ ?>
+                            <?php } else { ?>
                                 <div>
                                     <h3>Napi beosztás:</h3>
                                     <h2><?php echo $idobeosztas; ?></h2>
@@ -92,40 +93,41 @@
                             <?php } ?>
                             <div>
                                 <h3>Oktató:</h3>
-                                <h2><?php echo get_post(get_field('tanar',$kiiras->ID)[0])->post_title; ?></h2>
+                                <h2><?php echo get_post(get_field('tanar', $kiiras->ID)[0])->post_title; ?></h2>
                             </div>
                             <div class="">
                                 <h3>Helyszín:</h3>
-                                <h2><a href="<?php echo get_permalink(get_post(get_field('helyszin',$kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?><</a>/h2>
+                                <h2>
+                                    <a href="<?php echo get_permalink(get_post(get_field('helyszin', $kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin', $kiiras->ID)[0])->post_title; ?></a>
+                                </h2>
                             </div>
 
                         </div>
-                        <div class="icons">
-                            <div>
-                                <i class="material-icons">person</i>
-                                <span class="betelt"><?php echo ($is_full)?'Betelt!':'Még '. ($max - $beiratkozva) . ' hely';  ?></span>
-                            </div>
-                            <div>
-                                <i class="material-icons">place</i>
-                                <span><a href="<?php echo get_permalink(get_post(get_field('helyszin',$kiiras->ID)[0])->ID); ?>"><?php echo get_post(get_field('helyszin',$kiiras->ID)[0])->post_title; ?><</a></span>
 
+
+                        <div style="display:flex">
+                            <div class="icons">
+                                <div>
+                                    <i class="material-icons">person</i>
+                                    <span class="betelt"><?php echo ($is_full) ? 'Betelt!' : 'Még ' . ($max - $beiratkozva) . ' hely'; ?></span>
+                                </div>
+                                <div>
+                                    <?php $napszak = get_field('napszak', $kiiras->ID);
+                                    if ($napszak == 'esti') {
+                                        ?>
+                                        <i class="material-icons">brightness_3</i>
+                                        <span>Esti</span>
+                                    <?php } else { ?>
+                                        <i class="material-icons">brightness_7</i>
+                                        <span>Nappali</span>
+                                    <?php }
+                                    ?>
+
+                                </div>
                             </div>
-                            <div>
-							<?php $napszak = get_field('napszak', $kiiras->ID);
-                            if($napszak=='esti'){?>
-                                <i class="material-icons">brightness_3</i>
-                                <span>Esti</span>
-                            <?php }else{ ?>
-                                <i class="material-icons">brightness_7</i>
-                                <span>Nappali</span>
-                            <?php }
-                            ?>
-                                
-                            </div>
+                            <i class="material-icons close">close</i>
                         </div>
-						
 
-                        <i class="material-icons close">close</i>
 
                     </div>
                     <?php setup_postdata(get_post(get_the_ID()));
@@ -254,7 +256,7 @@
 						<h3 class="ne_varj">Ne várj a jelentkezéssel, fizetni csak a tanfolyam biztos indulása esetén kell!</h3>
 						<?php endif; ?>
                         <div class="button">
-                            <button class="jelentkezes p-button brown medium"><a href="?<?php echo ($is_full==false)?'jelentkezes':'varolista'; ?>&ID=<?php echo $kiiras->ID; ?>"><?php echo ($is_full==false)?'Jelentkezek':'Várólistára jelentkezek'; ?></a></button>
+                            <button class="jelentkezes p-button ghost white2 medium"><a href="?<?php echo ($is_full==false)?'jelentkezes':'varolista'; ?>&ID=<?php echo $kiiras->ID; ?>"><?php echo ($is_full==false)?'Jelentkezek':'Várólistára jelentkezek'; ?></a></button>
                             <button class="ceges-ajanlat p-button invisible medium"><a href="<?php echo get_permalink(); ?>?ceg&ID=<?php echo $kiiras->ID; ?>">Céges ajánlatot kérek</a></button>
                             <button class="ceges-ajanlat p-button invisible medium"><a href="<?php echo get_permalink(); ?>?erdeklodes&ID=<?php echo $kiiras->ID; ?>">Érdekel egy másik időpontban</a></button>
                         </div>
