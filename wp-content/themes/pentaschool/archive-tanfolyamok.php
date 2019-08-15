@@ -274,25 +274,31 @@ if (!empty($categories)):
                             ?>
                         </div>
                         <div class="fullwidth">
-                            <?php if ($date): ?>
-                                <?php if ($van_e_akcio): ?>
-                                    <h2 class="final-price">Ár: <?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
-                                <?php else: ?>
-                                    <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
-                                <?php endif; ?>
-                            <?php endif; ?>
-                            <div class="buttons">
-                                <a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button white medium">Részletek</a>
-                                <?php if(!$is_full && $date){ ?>
-                                    <a href="<?php echo get_permalink($kapcs_tanf). '?jelentkezes&ID='.$kiiras->ID; ?>?jelentkezes" class="p-button orange medium">Jelentkezés</a>
-                                <?php }else if($is_full && $date){ ?>
-                                    <a href="<?php echo get_permalink($kapcs_tanf). '?varolista&ID='.$kiiras->ID; ?>?jelentkezes" class="p-button orange medium">Várólistára jelentkezés</a>
-                                <?php }else if(!$date && !$ceges){ ?>
-                                    <a href="<?php echo get_permalink($kapcs_tanf) ?>'?erdeklodes" class="p-button orange medium">Érdeklődés</a>
-                                <?php }else if(!$date && $ceges){ ?>
-                                    <a href="<?php echo get_permalink($kapcs_tanf) ?>'?ceg" class="p-button orange medium">Céges megrendelés</a>
 
-                                <?php } ?>
+                            <div class="buttons">
+                                <?php if(!$date):?>
+                                    <h3>Nincs aktuális időpont!</h3>
+                                <?php endif; ?>
+                                <?php if ($date): ?>
+                                    <?php if ($van_e_akcio): ?>
+                                        <h2 class="final-price">Ár: <?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
+                                    <?php else: ?>
+                                        <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                                <div>
+                                    <a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button white medium">Részletek</a>
+                                    <?php if(!$is_full && $date){ ?>
+                                        <a href="<?php echo get_permalink($kapcs_tanf). '?jelentkezes&ID='.$kiiras->ID; ?>?jelentkezes" class="p-button orange medium">Jelentkezés</a>
+                                    <?php }else if($is_full && $date){ ?>
+                                        <a href="<?php echo get_permalink($kapcs_tanf). '?varolista&ID='.$kiiras->ID; ?>?jelentkezes" class="p-button orange medium">Várólistára jelentkezés</a>
+                                    <?php }else if(!$date && !$ceges){ ?>
+                                        <a href="<?php echo get_permalink($kapcs_tanf) ?>'?erdeklodes" class="p-button orange medium">Érdeklődés</a>
+                                    <?php }else if(!$date && $ceges){ ?>
+                                        <a href="<?php echo get_permalink($kapcs_tanf) ?>'?ceg" class="p-button orange medium">Céges megrendelés</a>
+                                    <?php } ?>
+                                </div>
+
                             </div>
                         </div>
                         <div class="mobilinfo fullwidth">

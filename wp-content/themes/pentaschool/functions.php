@@ -7,7 +7,7 @@ function register_my_menu() {
 add_theme_support( 'post-thumbnails' );
 
 function penta_scripts() {
- 
+ global $post;
   wp_enqueue_script( 'pentafilter.js', get_stylesheet_directory_uri() . '/js/pentafilter.js', array( 'jquery' ), false, true );
   wp_enqueue_script( 'velocity.min.js', get_stylesheet_directory_uri() . '/js/velocity.min.js', array( 'jquery' ), false, true );
   wp_enqueue_script( 'main.js', get_stylesheet_directory_uri() . '/js/main.js', array( 'jquery' ), false, true );
@@ -16,6 +16,10 @@ function penta_scripts() {
 	wp_enqueue_style( 'flickity.css', get_stylesheet_directory_uri() . '/css/flickity.css', array( ), false, false );
 	wp_enqueue_script( 'flickity.js', '//unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'single-tanfolyamok.js', get_stylesheet_directory_uri() . '/js/single-tanfolyamok.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'tematikajs.js', get_stylesheet_directory_uri() . '/js/tematikajs.js', array( 'jquery' ), false, true );
+ }
+ if(get_post($post)->post_name === "rolunk"){
+     wp_enqueue_script( 'tematikajs.js', get_stylesheet_directory_uri() . '/js/tematikajs.js', array( 'jquery' ), false, true );
  }
 }
 add_action ('wp_enqueue_scripts', 'penta_scripts');

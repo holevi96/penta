@@ -19,18 +19,24 @@ $kiiras = $_GET['ID'];
 			
                 <div class="header" id="gf_1">
 				<i class="material-icons close">close</i>
-				<h3 class="type"><?php echo(isset($_GET['varolista']))?'Várólistás jelentkezés':'Tanfolyam jelentkezés'; ?></h3>
+                    <?php if (isset($_GET['jelentkezes'])) { ?>
+                        <h3 class="type"><?php echo (isset($_GET['varolista'])) ? 'Várólistás jelentkezés' : 'Tanfolyam jelentkezés'; ?></h3>
+                    <?php } else if(isset($_GET['erdeklodes'])) { ?>
+                         <h3 class="type">Érdeklődés</h3>
+                    <?php }else if(isset($_GET['ceg'])){ ?>
+                        <h3 class="type">Ajánlatkérés</h3>
+                    <?php } ?>
                     <div class="general-info">
-						
-                        <div>
-                            <h1><?php the_title(); ?></h1>
-                            <!--<a target="_blank" href="<?php echo get_permalink(get_the_ID()); ?>#tematika">részletes tematika és órarend</a>-->
-							<!--<ul class="beosztasok">
+
+                            <div>
+                                <h1><?php the_title(); ?></h1>
+                                <!--<a target="_blank" href="<?php echo get_permalink(get_the_ID()); ?>#tematika">részletes tematika és órarend</a>-->
+                                <!--<ul class="beosztasok">
 								<li>
 									<i class="material-icons">today</i>
 									<span><?php echo get_field('kezdes', $kiiras); ?></span>
 								</li>								
-							<?php if($kezdet_veg == true){ ?>
+							<?php if ($kezdet_veg == true) { ?>
 								<li>
 									<i class="material-icons">date_range</i>
 									<span><?php echo $heti_beosztas; ?></span>								
@@ -39,7 +45,7 @@ $kiiras = $_GET['ID'];
 									<i class="material-icons">access_time</i>
 									<span><?php echo $idobeosztas; ?></span>								
 								</li>
-							<?php }else{ ?>
+							<?php } else { ?>
 								
 								<li>
 									<i class="material-icons">access_time</i>
@@ -48,8 +54,9 @@ $kiiras = $_GET['ID'];
 							<?php } ?>
 								
 							</ul>-->
-                        </div>
-						<?php if(isset($_GET['ID'])): ?>
+                            </div>
+
+    <?php if (!isset($_GET['ceg']) && !isset($_GET['erdeklodes'])) { ?>
                         <ul>
                             <!--<li>
                                 <i class="material-icons">local_offer</i>
@@ -89,6 +96,8 @@ $kiiras = $_GET['ID'];
 								</li>								
 							<?php } ?>						
                         </ul>
+    <?php } ?>
+                        <?php if(isset($_GET['ID'])): ?>
 						<?php endif; ?>
                     </div>
 								<?php if(isset($_GET['jelentkezes'])){ 

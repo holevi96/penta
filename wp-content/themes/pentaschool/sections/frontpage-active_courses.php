@@ -109,9 +109,12 @@
 					<div class="quick-view">
 						<div class="closer">></div>
 						<div class="date desktop">
-							<h4><?php echo date('Y',strtotime($date)); ?></h4>
-							<h3><?php echo $honapok_teljes[date('n',strtotime($date))]; ?></h3>
-							<h2><?php echo date('j',strtotime($date)); ?></h2>
+                            <div>
+                                <h4><?php echo date('Y',strtotime($date)); ?></h4>
+                                <h3><?php echo $honapok_teljes[date('n',strtotime($date))]; ?></h3>
+                                <h2><?php echo date('j',strtotime($date)); ?></h2>
+                            </div>
+
 						</div>
 						<div class="date mobile">
 							<h3><?php echo $honapok[date('n',strtotime($date))]; ?></h3>
@@ -120,7 +123,7 @@
 						<div class="content">
 							<div class="fullwidth title">
 								<h2><?php echo get_post($kapcs_tanf)->post_title; ?></h2>
-								
+                                <a class="desktop" href="/tanfolyamok?termname=<?php echo $cat_slug; ?>"><span class="category-tag <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></span></a>
 							</div>
 							<div class="fullwidth details clearfix">
 								<?php
@@ -180,20 +183,33 @@
 								?>
 							</div>
 							<div class="fullwidth">
-								<?php if($van_e_akcio): ?>
-									<h2 class="final-price"><?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
-								<?php else: ?>
-									<h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
-								<?php endif; ?>	
+
 
 	
 								
 								<div class="buttons">
-									<a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button ghost white medium">Részletek</a>
-									<?php if(!$is_full): ?>
-									<a href="<?php echo get_permalink($kapcs_tanf). '?jelentkezes&ID='.$kiiras->ID; ?>" class="p-button orange medium">Jelentkezés</a>
-									<?php else: ?>
-									<a  href="<?php echo get_permalink($kapcs_tanf). '?varolista&ID='.$kiiras->ID; ?>" class="p-button orange medium varolista">Várólistára jelentkezés</a>
+                                    <div>
+                                        <?php if($van_e_akcio): ?>
+                                            <h2 class="final-price"><?php echo number_format($akcios, 0, ',', ' '); ?> Ft.</h2>
+                                            <h4 class="discounted desktop"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h4>
+                                        <?php else: ?>
+                                            <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
+                                        <?php endif; ?>
+
+
+
+
+
+                                    </div>
+
+                                    <div>
+                                        <a href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $kiiras->ID; ?>" class="p-button ghost white medium">Részletek</a>
+                                        <?php if(!$is_full): ?>
+                                            <a href="<?php echo get_permalink($kapcs_tanf). '?jelentkezes&ID='.$kiiras->ID; ?>" class="p-button orange medium">Jelentkezés</a>
+                                        <?php else: ?>
+                                        <a  href="<?php echo get_permalink($kapcs_tanf). '?varolista&ID='.$kiiras->ID; ?>" class="p-button orange medium varolista">Várólistára jelentkezés</a>
+                                    </div>
+
 	
 									<?php endif; ?>
 								</div>

@@ -9,8 +9,9 @@ jQuery(document).ready(function(){
 		 
 	});
 	jQuery(".popup").click(function(){
+        jQuery('body').addClass("videopopup");
 		var youtube_link = jQuery(this).attr('data-link');
-		$url = "https://www.youtube.com/embed/" + youtube_link.slice(-11);
+		$url = "https://www.youtube.com/embed/" + youtube_link.slice(-11)+"?autoplay=1&enablejsapi=1&mute=1";
 		if(jQuery('body').width()>800){
 			jQuery('#video-view').find("iframe").attr('src',$url).css('visibility','visible');
 			jQuery('#video-view').css('opacity',1).css('visibility','visible');
@@ -23,7 +24,8 @@ jQuery(document).ready(function(){
 
 	})
 	jQuery('#video-view i').click(function(){
-		jQuery('#video-view').css('opacity',0).css('visibility','hidden').find('iframe').css('visibility','hidden');
+        jQuery('body').removeClass("videopopup");
+		jQuery('#video-view').css('opacity',0).css('visibility','hidden').find('iframe').attr('src','').css('visibility','hidden');
 	})
 
 
@@ -59,10 +61,15 @@ jQuery(document).ready(function(){
 				jQuery('.tanfolyam-full-details').removeClass('opened')
 				jQuery('body').removeClass('expanded')	
 			}
-
-			
 		}
-	})
+		if(jQuery('body').hasClass('videopopup')){
+            if( jQuery(e.target).closest(".video-view").length <= 0 && jQuery(e.target).closest(".popup i").length <= 0) {
+                jQuery('body').removeClass("videopopup");
+                jQuery('#video-view').css('opacity',0).css('visibility','hidden').find('iframe').attr('src','').css('visibility','hidden');
+            }
+        }
+
+	});
 	$(document).keyup(function(e) {
 		if (e.key === "Escape") { // escape key maps to keycode `27`
 			if(jQuery('body').hasClass('expanded')){
@@ -72,35 +79,7 @@ jQuery(document).ready(function(){
 		}
 	});
 
-	jQuery(document).ready(function(){
-		function setTematikaIcons(container){
-			jQuery(container).find('li.closed i').text('add')
-			jQuery(container).find('li.opened i').text('remove')
-		}
-		jQuery('.tematika-lista li i').click(function(){
-			var container = jQuery(this).parent().parent().parent();
-			if(jQuery(this).text() == 'add'){
-				jQuery(this).parent().parent().removeClass('closed').addClass('opened')
-			}else{
-				jQuery(this).parent().parent().removeClass('opened').addClass('closed')
-			}
-			setTematikaIcons(container)
-		});
-		jQuery('.unfold i').click(function(){
-			var container = jQuery(this).parent().parent().parent().find(".tematika-lista");
 
-			if(jQuery(this).text() == 'unfold_less'){
-				jQuery(this).text('unfold_more')
-				jQuery(this).parent().find('span').text("Összeset kinyit")
-				jQuery(container).find('li').removeClass("opened").addClass('closed')
-			}else{
-				jQuery(this).text('unfold_less')
-				jQuery(this).parent().find('span').text("Összeset becsuk")
-				jQuery(container).find('li').removeClass("closed").addClass('opened')
-			}
-			setTematikaIcons(container)
-		})
-	})
 	
 	jQuery('.idopontok-desktop>ul>li, .idopontok-mobile>ul>li').click(function(){
 		jQuery(this).parent().find('li').removeClass('selected')

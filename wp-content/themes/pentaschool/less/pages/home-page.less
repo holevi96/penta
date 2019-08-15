@@ -639,6 +639,8 @@ body#home{
 			width: 60px;
 			height: 142%;
 			font-family:@font;
+          justify-content: space-around;
+          font-weight: 700;
 			i{
 				position:relative;
 				left:12px;
@@ -785,6 +787,8 @@ body#home{
       }
 
       .quick-view{
+
+
 		  .closer{
 			  display:none;
 			  @media @xs,@sm,@md{
@@ -829,22 +833,31 @@ body#home{
 			border-radius: 6px;
 			border-bottom-right-radius: 0;
 			border-top-right-radius: 0;
-			
+			&.desktop{
+             >div{
+               height: 100% !important;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-flow: column;
+             }
+            }
 			h4{
-				padding-top: 110px;
-				padding-left: 30px;
+				//padding-top: 110px;
+				//padding-left: 30px;
 				font-family: KoHo;
 				font-weight: 500;	
 			}
 			h3{
-				padding-left: 30px;
+				//padding-left: 30px;
 			}
 			h2{
-				padding-left: 30px;
+				//padding-left: 30px;
 			}
 			@media @xs,@sm,@md{
 				display: flex !important;
 				justify-content: center;
+              align-items:center;
 				flex-flow: column;
 				width: 55px;
 				&.desktop{
@@ -852,13 +865,13 @@ body#home{
 				}
 				h4{
 					padding-top:0;
-					padding-left: 20px;
+					//padding-left: 20px;
 				}
 				h3{
-					padding-left: 10px;
+					//padding-left: 10px;
 				}
 				h2{
-					padding-left: 17px;
+					//padding-left: 17px;
 				}
 				
 			}
@@ -886,10 +899,15 @@ body#home{
         }
 
         .fullwidth{
-
+          @media @xs,@sm,@md{
+            align-items: flex-end;
+          }
 			&.title{
-				
-
+              margin-bottom: 3rem;
+                justify-content: flex-start;
+              .category-tag{
+                margin-left: 2rem;
+              }
 				h2{
 					@media @xs,@sm,@md{
 						padding-left: 0px;
@@ -933,11 +951,12 @@ body#home{
 				display:none;
 				
 				@media @xs,@sm,@md{
-					margin-top:-65px;
-					display:block;
+                  margin-bottom: 25px;
+                  display: block;
+                  width: 70%;
 					h2{
 						display:block !important;
-						font-size: 15px;
+						font-size: 12px;
 						font-weight: 400;
 					}
 				}
@@ -949,7 +968,7 @@ body#home{
 					position: relative;
 					top: 5px;
 					@media @xs,@sm,@md{
-						font-size: 20px;
+						font-size: 15px;
 					}						
 					
 					
@@ -979,7 +998,7 @@ body#home{
 					@media @xs,@sm,@md{
 						font-size: 15px;
 						width: 100%;
-					    margin-top: -60px;
+					    //margin-top: -60px;
 					}
 				}
 			}
@@ -992,17 +1011,29 @@ body#home{
         .buttons{
           display: flex;
           flex-flow: row;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          &>div{
+            display:flex;
+            .discounted{
+              text-decoration: line-through;
+              font-weight: 200;
+              margin-left: 1rem;
+            }
+          }
 			a{
 				margin-right:15px;
 			}
 			@media @xs,@sm,@md{
 				display: block;
-				text-align: right;
+				//text-align: right;
 				.varolista{
 					width:70px !important;
 				} 
                 a.p-button{
                   padding:.5rem 0.9rem;
+                  font-size: 14px !important;
                 }
 			}			
 

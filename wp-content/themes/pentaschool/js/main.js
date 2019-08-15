@@ -116,19 +116,28 @@ jQuery(document).ready(function(){
 	}
 	
 	function closeAllCourses(){
-		jQuery("#home-courses .active-course li").removeClass('expanded').find('.quick-view').css('height',0).find('div.date, div.content').css('height',0)
+		jQuery("#home-courses .active-course li.expand").removeClass('expanded');
+		if(jQuery(document).width()>880){
+			jQuery("#home-courses .active-course li").removeClass('expanded').find('.quick-view').css('height',0).find('div.date, div.content').css('height',0)
+		}
+
 	}
 	function openCourse(object){
-				jQuery(object).find('.quick-view').css('height',jQuery(object).attr('h')).find('div.date, div.content').css('height',jQuery(object).attr('h'))
-				jQuery("#home-courses .active-course li.expand").removeClass('expanded')
-				jQuery(object).addClass('expanded')		
+		jQuery("#home-courses .active-course li.expand").removeClass('expanded');
+		jQuery(object).addClass('expanded');
+		if (jQuery(document).width() > 880) {
+			jQuery(object).find('.quick-view').css('height', jQuery(object).attr('h')).find('div.date, div.content').css('height', jQuery(object).attr('h'))
+		}
 	}
 	
 	//beállítom minden tanfolyamnak, hogy mekkorára nyíljon ki majd ha kinyílna.
-	jQuery("#home-courses .active-course li.expand").find('.quick-view').css('height','auto').find('div').css('height','auto')
-	jQuery.each(jQuery("#home-courses .active-course li"), function(index,item){
-		jQuery(item).attr('h',jQuery(item).find('.quick-view').height())
-	})
+	if(jQuery(document).width()>880){
+		jQuery("#home-courses .active-course li.expand").find('.quick-view').css('height','auto').find('div').css('height','auto')
+		jQuery.each(jQuery("#home-courses .active-course li"), function(index,item){
+			jQuery(item).attr('h',jQuery(item).find('.quick-view').height())
+		})
+	}
+
 	
 	closeAllCourses();
 	

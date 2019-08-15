@@ -4,7 +4,7 @@
 <?php include 'inc/menu.php'; ?>
 <div id="video-view">
 	<i class="material-icons close">close</i>
-	<iframe width="1120" height="630" src="" style="visibility:hidden" frameborder="0" allowfullscreen>
+	<iframe width="1120" height="630" src="" allow="autoplay" style="visibility:hidden" frameborder="0" allowfullscreen>
 	
 	</iframe>
 </div>
