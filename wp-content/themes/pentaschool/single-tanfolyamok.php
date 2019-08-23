@@ -33,9 +33,21 @@
 <?php 
 	 get_template_part('sections/singletanf','tematika');
 ?>
+
+
 <?php 
 	 get_template_part('sections/singletanf','calltoaction');
 ?>
+    <?php $tanfok = get_field("kapcsolodo_tanfolyam"); ?>
+    <div class="course-search-result course-listing kapcsolodo-tanfolyamok">
+        <div class="pnt-container">
+            <ul class="active-course">
+
+                <h2 class="p-section-title">Kapcsolódó tanfolyamok:</h2>
+                <?php include( locate_template( 'tanf-simple-listing.php', false, false ) ); ?>
+            </ul>
+        </div>
+    </div>
 <?php 
 	 get_template_part('sections/singletanf','ajanlasok');
 ?>

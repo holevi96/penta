@@ -30,6 +30,8 @@ foreach ($tanfok as $t) {
     $beiratkozva = get_field('beiratkozva',$kiiras->ID);
     $is_full = ($max == $beiratkozva);
     $is_ceges = get_field('ceges_megrendeles',$kapcs_tanf);
+    $is_english = get_field('english',$kapcs_tanf);
+    $english_title = get_field('english_title',$kapcs_tanf);
     $biztosan_indul = ($beiratkozva>=$min);
     $szazalek = 0;
     if($akcios<$listaar){
@@ -56,7 +58,12 @@ foreach ($tanfok as $t) {
                 </div>
                 <div class="title">
                     <span class="category-tag <?php echo $cat_slug; ?>"><?php echo $cat_name; ?></span>
-                    <h2 ><?php echo get_post($kapcs_tanf)->post_title; ?></h2>
+                    <?php if(!$is_english){?>
+                        <h2><?php echo get_post($kapcs_tanf)->post_title; ?></h2>
+                    <?php }else{ ?>
+                        <h2><?php echo $english_title; ?></h2>
+                    <?php }?>
+
                 </div>
                 <?php if($date){ ?>
                     <div>
