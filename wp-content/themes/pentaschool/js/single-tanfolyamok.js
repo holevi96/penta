@@ -106,7 +106,7 @@ jQuery(document).ready(function(){
 		jQuery('#course-idopontok').css("height",top_height).find('.image-wrapper').css("height",top_height)
 	}else{
 			jQuery('#course-idopontok').css('height',jQuery('.top').height())
-			jQuery('.unfold i').click();
+			// jQuery('.unfold i').click();
 	}
 	
 	jQuery("#field_1_43>label").html('Efogadom az <a href="#" name="terms" target="_blank">adatvédelmi nyilatkozatot.</a>');

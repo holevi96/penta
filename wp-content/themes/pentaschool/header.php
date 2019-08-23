@@ -6,6 +6,8 @@
     <meta charset="UTF-8">
     <title><?php wp_title( '·',TRUE,'right' ); bloginfo( 'name' );?></title>
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon.ico" type="image/x-icon">
     <!-- STYLESHEETS -->
     <!--<link rel="stylesheet" type="text/css" media="all" href="dist/proto.min.css"/>-->
     <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/proto.min.css"/>

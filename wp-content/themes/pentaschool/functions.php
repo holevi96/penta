@@ -1055,3 +1055,14 @@ function custom_gforms_steps_html($progress_steps, $form, $page){
 		return $progress_steps;
 }
 
+// [bartag foo="foo-value"]
+function p_button( $atts ) {
+    $a = shortcode_atts( array(
+        'title' => 'something',
+        'link' => '',
+    ), $atts );
+
+    return "<a class='p-button orange medium' href='".$a['link']."'>".$a['title']."</a>";
+
+}
+add_shortcode( 'p_button', 'p_button' );

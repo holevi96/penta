@@ -742,20 +742,15 @@ body#mobile{
 }
 
 @neked-height: 4rem;
-
+#neked-ajanljuk{
+  position: relative;
+  top:50px;
+}
 .pro-contra-wrapper{
+  &>div{
 
-  &.pro{
-    i{
-      color: mediumseagreen;
-    }
   }
 
-  &.contra{
-    i{
-      color: @red-1;
-    }
-  }
 
   li{
     background: white;
@@ -774,6 +769,19 @@ body#mobile{
       color: @brown0;
     }
   }
+  .pro{
+
+    li i{
+      color: mediumseagreen;
+    }
+  }
+
+  .contra{
+
+    li i{
+      color: @red-1;
+    }
+  }
 }
 
 #neked-ajanljuk{
@@ -783,7 +791,11 @@ body#mobile{
   @media @xxl, @xl, @lg{
     //background: white;
   }
-
+  #mind-content-call-to-action{
+    padding:2rem;
+    border-bottom-right-radius: @border-radius;
+    border-bottom-left-radius: @border-radius;
+  }
   ul.pnt-container{
     .flex(row, flex-start);
     height: @neked-height;
@@ -813,6 +825,7 @@ body#mobile{
         color: @brown0;
 
       }
+
     }
 
     @media @xs, @sm, @md{
@@ -831,7 +844,10 @@ body#mobile{
   }
 
   .pro-contra-wrapper{
-
+    .p-button{
+      margin-left:1.5rem;
+      margin-top: 1rem;
+    }
     @media @xxl, @xl, @lg{
       display: flex;
       flex-flow: row;
@@ -843,6 +859,16 @@ body#mobile{
         box-sizing: border-box;
         padding: 2rem 0;
         border-radius: @border-radius;
+        &.pro{
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          //border-bottom-left-radius: 0;
+        }
+        &.contra{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+          //border-bottom-right-radius: 0;
+        }
 
         li{
           margin: 0;

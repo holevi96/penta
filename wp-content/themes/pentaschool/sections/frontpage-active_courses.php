@@ -183,9 +183,6 @@
 								?>
 							</div>
 							<div class="fullwidth">
-
-
-	
 								
 								<div class="buttons">
                                     <div>
@@ -195,10 +192,6 @@
                                         <?php else: ?>
                                             <h2 class="final-price"><?php echo number_format($listaar, 0, ',', ' '); ?> Ft.</h2>
                                         <?php endif; ?>
-
-
-
-
 
                                     </div>
 

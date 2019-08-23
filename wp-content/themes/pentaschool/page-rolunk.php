@@ -14,7 +14,7 @@
                <?php the_content(); ?>
 			</div>
             <div class="image-wrapper">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/example-image-1.png" alt="">
+                <img src="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(get_the_ID()), 'full')[0]; ?>" alt="">
                 <?php
                 echo get_template_part('sections/section','faq');
                 ?>

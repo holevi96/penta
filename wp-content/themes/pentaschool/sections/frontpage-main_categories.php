@@ -22,7 +22,7 @@
 						<h3><?php echo $kezdes; ?></h3>
 						<?php if($title != $notfound_szoveg): ?>
 						<div>
-							<a class="p-button white ghost medium" href="<?php echo get_permalink($kapcs_tanf); ?>">Részletek</a>
+							<a class="p-button white ghost medium" href="<?php echo get_permalink($kapcs_tanf); ?>?ID=<?php echo $ID; ?>">Részletek</a>
 							<a class="p-button invisible medium"  href="<?php echo get_permalink($kapcs_tanf) ?>?jelentkezes&ID=<?php echo $kategoria['tanfolyam_kiiras'][0]->ID ?>">Jelentkezem</a>
 						</div>
 						<?php endif; ?>

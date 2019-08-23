@@ -27,5 +27,12 @@ if($tematika): ?>
             </ul>
         </div>
     </section>
+    <script>
+        jQuery(document).ready(function () {
+            setTimeout(function () {
+                jQuery(".faq .unfold i").click()
+            },100)
 
+        })
+    </script>
 <?php endif; ?>
