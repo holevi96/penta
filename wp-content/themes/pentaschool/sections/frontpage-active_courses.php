@@ -26,7 +26,7 @@
 				$honapok_teljes[11] = 'November';
 				$honapok_teljes[12] = 'December';
 ?>				
-			<li style="visibility:hidden;display:none;" class="tanf notfound" visible="none">
+			<li style="display:none;" class="tanf notfound" visible="none">
                 <div class="list-view">
                     <div class="date">
                         
@@ -207,20 +207,21 @@
 									<?php endif; ?>
 								</div>
 							</div>
-							<div class="mobilinfo fullwidth">
-								<?php if($biztosan_indul):?>
-									<h2 class="biztos">
-										<span>Biztosan<br>indul!</span>
-										<i class="material-icons">done</i>
-									</h2>
-								<?php else: ?>
-									<h2 class="szervezes">
-										<span>Még <b><?php echo $min-$beiratkozva; ?></b> fő<br> kell az<br> induláshoz!</span>
 
-									</h2>
-								<?php endif; ?>								
-							</div>
 						</div>
+                        <div class="mobilinfo fullwidth">
+                            <?php if($biztosan_indul):?>
+                                <h2 class="biztos">
+                                    <span>Biztosan<br>indul!</span>
+                                    <i class="material-icons">done</i>
+                                </h2>
+                            <?php else: ?>
+                                <h2 class="szervezes">
+                                    <span>Még <b><?php echo $min-$beiratkozva; ?></b> fő<br> kell az<br> induláshoz!</span>
+
+                                </h2>
+                            <?php endif; ?>
+                        </div>
 					</div>
 				</li>
 					

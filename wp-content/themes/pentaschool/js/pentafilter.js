@@ -26,10 +26,18 @@
                 var selectedTerm = $(this).attr('termName');
 				var other_term = ''
 				if(other_pentafilter_class!= ''){
-					console.log(other_pentafilter_class)
-					other_term = $(other_pentafilter_class).find('li.active').attr('termname');
-					
-					$(container.selector + '[termname*=' + selectedTerm + '][termname*=' + other_term + ']').attr('visible','visible');
+					console.log(other_pentafilter_class);
+
+						other_term = $(other_pentafilter_class).find('li.active').attr('termname');
+						// if(other_term !== selectedTerm){
+							$(container.selector + '[termname*=' + selectedTerm + ']'+'[termname*=' + other_term + ']').attr('visible','visible');
+						// }else{
+						// 	$(container.selector + '[termname*=' + selectedTerm + ']').attr('visible','visible');
+						// }
+
+
+
+
 				}else{
 					$(container.selector + '[termname*=' + selectedTerm + ']').attr('visible','visible');
 				}

@@ -1,7 +1,33 @@
 @import (reference) "../pentaschool.less";
 
 @mobile-menu-height: 4rem;
+.post-type-archive-tanfolyamok #left-side .filter{
+  @media @md,@sm,@xs{
+    display:block;
+    position: absolute;
+    right: 1rem;
 
+  }
+
+}
+.filter-box{
+  position: absolute;
+  height: 100vh;
+  width: 15rem;
+  right: 0;
+  background: #fff;
+  .tr2;
+  transform: translateX(15rem);
+
+  &.opened{
+    transform: translateX(0rem);
+  }
+  .course-filter{
+    display:block;
+    left: 2rem;
+    top: -1rem;
+  }
+}
 #left-side{
 
   @media @md, @lg, @xl, @xxl {
@@ -87,16 +113,19 @@
         color: @brown1;
       }
     }
+
+  }
+  .filter{
+    display:none;
   }
 
-
   @media @xs, @sm{
-    .flex(row, initial);
+    .flex(row, space-between);
     height: @mobile-menu-height;
     background:#fff;
-  margin-left:-4%;
-  margin-right:-4%;
-    padding-left: 4%;
+  margin-left:-5%;
+  margin-right:-5%;
+    padding-left: 5%;
     @media @sm {
       padding-left: 4%;
       padding-right: 4%;

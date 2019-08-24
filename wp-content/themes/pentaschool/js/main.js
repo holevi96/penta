@@ -107,8 +107,12 @@ jQuery(document).ready(function(){
 		jQuery('#home-courses .active-course li').pentafilter('pentafilter-napszak',{other_pentafilter_class:'#pentafilter-box'},function(){});
 	}	
 	if(jQuery('body').hasClass('post-type-archive-tanfolyamok')){
+
 		jQuery('.active-course li').pentafilter('pentafilter-box',{other_pentafilter_class:'#pentafilter-aktiv'},function(){});
 		jQuery('.active-course li').pentafilter('pentafilter-aktiv',{other_pentafilter_class:'#pentafilter-box'},function(){});
+
+		jQuery('.active-course li').pentafilter('pentafilter-box-mobile',{other_pentafilter_class:'#pentafilter-aktiv-mobile'},function(){});
+		jQuery('.active-course li').pentafilter('pentafilter-aktiv-mobile',{other_pentafilter_class:'#pentafilter-box-mobile'},function(){});
 		
 		if(findGetParameter('termname') != null){
 			$('#pentafilter-box .pentafilter[termname*="'+ findGetParameter('termname') +'"]').click()
@@ -158,4 +162,17 @@ jQuery(document).ready(function(){
 		})
 		
 
+	// mobile tanfolyam filtering sidebar
+
+	jQuery("#left-side .filter").click(function () {
+		var $box = jQuery('.filter-box');
+		if(!$box.hasClass('opened')){
+			jQuery('.filter-box').addClass("opened")
+		}else{
+			jQuery('.filter-box').removeClass("opened")
+		}
+	});
+		jQuery(".filter-box .pentafilter").click(function () {
+			jQuery('.filter-box').removeClass("opened")
+		})
 });

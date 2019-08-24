@@ -32,6 +32,36 @@
             <i class="material-icons menu">menu</i>
             <i class="material-icons up">arrow_upward</i>
         </div>
+        <div class="filter">
+            <i class="material-icons menu">filter_list</i>
+        </div>
+
+    </div>
+    <div class="filter-box mobile">
+        <div class="course-filter">
+            <ul id="pentafilter-aktiv-mobile">
+                <li>Válassz feltételt!</li>
+                <li class="pentafilter" termName="tanf">Összes</li>
+                <li class="pentafilter" termName="aktiv">Van időpontja</li>
+            </ul>
+
+            <ul id="pentafilter-box-mobile">
+                <li>Válassz kategóriát!</li>
+                <li class="pentafilter" termName="tanf">Összes</li>
+
+                <?php
+                $categories = get_categories(array(
+                    'orderby' => 'name',
+                    'order' => 'ASC'
+                ));
+
+                foreach ($categories as $category) { ?>
+                    <li class="pentafilter" termName="<?php echo $category->slug; ?>"><?php echo $category->name; ?></li>
+                <?php } ?>
+
+            </ul>
+
+        </div>
     </div>
 	<div class="logo">
 		<a href="<?php echo site_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/pentaschool-logo.svg"/></a>

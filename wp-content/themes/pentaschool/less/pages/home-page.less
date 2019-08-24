@@ -71,6 +71,10 @@ body.fixed{
 }
 
 body{
+  @media @xs,@sm,@md{
+    top: 65px;
+    position: relative;
+  }
 	background: @p-bg;
 	&.overlayed{
 		position:relative;
@@ -522,56 +526,56 @@ body#home{
   }
 }
 
+.course-filter{
+  position: absolute;
+  left: 10rem;
+  top: 20px;
+  width: @grid-left;
 
-.course-listing{
-  position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  //background: @gray1;
 
-  .course-filter{
-    position: absolute;
-    left: 10rem;
-    top: 20px;
-    width: @grid-left;
+  /*
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 0 7px 7px 0;
+  */
 
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    //background: @gray1;
+  @media @xs, @sm, @md,@lg{
+    display: none;
+  }
 
-    /*
-    background: white;
-    border: 1px solid #e5e5e5;
-    border-radius: 0 7px 7px 0;
-    */
+  ul{
+    margin-bottom: 2rem;
+    padding: 2rem 0;
 
-    @media @xs, @sm, @md,@lg{
-      display: none;
+    li:first-child{
+      border-bottom: 2px solid @p-y4;
     }
 
-    ul{
-      margin-bottom: 2rem;
-      padding: 2rem 0;
-
-      li:first-child{
-        border-bottom: 2px solid @p-y4;
-      }
-
-      li{
-        font-family: @font;
-        margin-bottom: 1rem;
-		cursor:pointer;
-        .md-text;
-        color: @brown1;
-		&.active{
-			padding: .2rem .4rem;
-			box-sizing: border-box;
-			border-radius: 2px;
-			background: #f2703d;
-			color: white;
-		}
+    li{
+      font-family: @font;
+      margin-bottom: 1rem;
+      cursor:pointer;
+      .md-text;
+      color: @brown1;
+      &.active{
+        padding: .2rem .4rem;
+        box-sizing: border-box;
+        border-radius: 2px;
+        background: #f2703d;
+        color: white;
       }
     }
   }
+}
+.course-listing{
+  position: relative;
+
+
 
   .active-course{
 	
@@ -587,6 +591,7 @@ body#home{
     }
     @media @xs, @sm, @md{
       margin: 0;
+      padding-top: 1rem;
     }
 
     li{
@@ -619,6 +624,7 @@ body#home{
 		@media @xs,@sm,@md{
 			display:block;
 			padding-left:4rem;
+          min-height: 50px;
 		}        
 
         h2{
@@ -698,6 +704,9 @@ body#home{
             color: @brown1;
             margin-left: 2rem;
 			&.ceges{
+              @media @xs,@sm,@md{
+               display:none;
+              }
 				i{
 					color:@red-1;
 					position:relative;
@@ -772,7 +781,7 @@ body#home{
 				height: 30px;
 				color: #fff;
 				background: @p-y4;
-				top: 32%;
+                top: 23%;
 				border-radius: 4px;
 				right: 12px;
 				font-family: KoHo;

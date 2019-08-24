@@ -29,11 +29,7 @@ $honapok_teljes[10] = 'Október';
 $honapok_teljes[11] = 'November';
 $honapok_teljes[12] = 'December';
 ?>
-        <style>
-            .list-view{
-                height:50px !important;
-            }
-        </style>
+
 
     <div class="course-listing" class="body">
 
@@ -66,7 +62,7 @@ $honapok_teljes[12] = 'December';
     <ul class="active-course">
 
     <h2 class="p-section-title">Az összes tanfolyam</h2>
-    <li style="visibility:hidden;display:none;" class="tanf notfound" visible="none">
+    <li style="display:none;" class="tanf notfound" visible="none">
         <div class="list-view">
             <div class="date">
 
@@ -148,7 +144,7 @@ if (!empty($categories)):
             ?>
             <li class="expand" termName="tanf <?php foreach ((get_the_terms($kapcs_tanf, 'category')) as $term) {
                 echo $term->slug . ' ';
-            } ?> <?php echo get_field('napszak', $kiiras->ID); ?>">
+            } ?> <?php echo get_field('napszak', $kiiras->ID); ?> <?php echo ($date)?"aktiv":""; ?>">
 
                 <div class="list-view">
                     <div class="date">

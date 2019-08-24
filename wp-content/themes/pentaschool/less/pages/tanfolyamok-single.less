@@ -760,7 +760,11 @@ body#mobile{
 @neked-height: 4rem;
 #neked-ajanljuk{
   position: relative;
-  top:50px;
+  @media @xxl, @xl, @lg{
+    top:50px;
+
+  }
+
 }
 .pro-contra-wrapper{
   &>div{
