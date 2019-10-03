@@ -69,6 +69,7 @@ if( function_exists('acf_add_options_page') ) {
     acf_add_options_page('Referencia Logo Slider');
     acf_add_options_page('Főoldali kiemelt kategóriák');
     acf_add_options_page('Footer menu');
+    acf_add_options_page('GYIK');
 
 
 }
