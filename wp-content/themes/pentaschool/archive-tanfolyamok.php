@@ -108,11 +108,19 @@ if (!empty($categories)):
             $kiirasok = get_posts(array(
             'post_type' => 'tanfolyam-kiiras',
             'meta_query' => array(
-            array(
-            'key' => 'kapcsolodo_tanf', // name of custom field
-            'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
-            'compare' => 'LIKE'
-            )
+                    'relation'=>'AND',
+                array(
+                'key' => 'kapcsolodo_tanf', // name of custom field
+                'value' => '"' . get_the_ID() . '"', // matches exaclty "123", not just 123. This prevents a match for "1234"
+                'compare' => 'LIKE'
+                ),
+                 array(
+                        'key' => 'kezdes',
+                        'value' => date('Ymd'),
+                        'type' => 'DATE',
+                        'compare' => '>='
+                  ),
+
             )
 
             ));

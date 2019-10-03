@@ -48,7 +48,15 @@
 					'numberposts' => -1,
 					'meta_key' => 'kezdes',
                     'orderby' => 'meta_value',
-                    'order' => 'ASC'
+                    'order' => 'ASC',
+                    'meta_query' => array(
+                        array(
+                            'key' => 'kezdes',
+                            'value' => date('Ymd'),
+                            'type' => 'DATE',
+                            'compare' => '>='
+                        ),
+                    ),
 				));
 				foreach($aktualis as $kiiras){
 						$kapcs_tanf = get_field('kapcsolodo_tanf',$kiiras->ID)[0];
