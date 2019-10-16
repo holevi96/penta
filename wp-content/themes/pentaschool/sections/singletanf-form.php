@@ -20,7 +20,9 @@ $kiiras = $_GET['ID'];
                 <div class="header" id="gf_1">
 				<i class="material-icons close">close</i>
                     <?php if (isset($_GET['jelentkezes'])) { ?>
-                        <h3 class="type"><?php echo (isset($_GET['varolista'])) ? 'Várólistás jelentkezés' : 'Tanfolyam jelentkezés'; ?></h3>
+                        <h3 class="type">Tanfolyam jelentkezés</h3>
+                    <?php }else if(isset($_GET['varolista'])){ ?>
+                        <h3 class="type">Várólistára jeletnkezés</h3>
                     <?php } else if(isset($_GET['erdeklodes'])) { ?>
                          <h3 class="type">Érdeklődés</h3>
                     <?php }else if(isset($_GET['ceg'])){ ?>
@@ -98,14 +100,18 @@ $kiiras = $_GET['ID'];
                         </ul>
     <?php } ?>
                         <?php if(isset($_GET['ID'])): ?>
+
 						<?php endif; ?>
                     </div>
+                    <?php if(isset($_GET['varolista'])){ ?>
+                        <p>A jelentkezés nem számít véglegesnek, értesíteni fogjuk, ha felszabadult hely a tanfolyamra!</p>
+                    <?php } ?>
 								<?php if(isset($_GET['jelentkezes'])){ 
 								
 								 echo do_shortcode('[gravityform id="1" title="false" description="true" ajax="false"]'); 
 								}
 								if(isset($_GET['varolista'])){
-                                    echo do_shortcode('[gravityform id="1" title="true" description="true" ajax="false"]');
+                                    echo do_shortcode('[gravityform id="1" title="true" description="false" ajax="false"]');
                                 }
                                 if(isset($_GET['erdeklodes'])){
                                     echo do_shortcode('[gravityform id="5" title="true" description="true" ajax="false"]');
