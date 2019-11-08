@@ -1067,3 +1067,10 @@ function p_button( $atts ) {
 
 }
 add_shortcode( 'p_button', 'p_button' );
+
+
+add_filter( 'upload_mimes', 'my_myme_types', 1, 1 );
+function my_myme_types( $mime_types ) {
+    $mime_types['webp'] = 'image/webp';     // Adding .svg extension
+    return $mime_types;
+}
