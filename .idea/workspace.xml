@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0c99dd5f-cf49-4de4-bc4b-e2ec44bf5b79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php" afterDir="false" />
-    </list>
+    <list default="true" id="0c99dd5f-cf49-4de4-bc4b-e2ec44bf5b79" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="1073" column="68" selection-start-line="1073" selection-start-column="68" selection-end-line="1073" selection-end-column="68" />
+            <state relative-caret-position="510">
+              <caret line="1107" column="1" selection-start-line="1107" selection-start-column="1" selection-end-line="1107" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -114,7 +111,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>quiz</find>
       <find>quiz_gravtiy_form_id</find>
       <find>pro</find>
       <find>main-search</find>
@@ -144,6 +140,7 @@
       <find>type</find>
       <find>ty</find>
       <find>file</find>
+      <find>upload_mimes</find>
     </findStrings>
     <replaceStrings>
       <replace>fade(#fff,50%)</replace>
@@ -326,7 +323,7 @@
       <workItem from="1571485899935" duration="602000" />
       <workItem from="1571905886179" duration="1031000" />
       <workItem from="1571929777822" duration="615000" />
-      <workItem from="1573209816763" duration="177000" />
+      <workItem from="1573209816763" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="wip">
       <created>1565696384240</created>
@@ -433,11 +430,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571257230211</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mime type for upload">
+      <created>1573210013161</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573210013161</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102426000" />
+    <option name="totallyTimeSpent" value="102547000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -452,7 +456,7 @@
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.312982" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.312982" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -466,7 +470,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32974428" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21381143" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21381143" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
@@ -501,7 +505,8 @@
     <MESSAGE value="adding filter to mobile" />
     <MESSAGE value="a lejárt tanfolyamok nem jelennek meg a listákban" />
     <MESSAGE value="gyik fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="gyik fix" />
+    <MESSAGE value="mime type for upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="mime type for upload" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/front-page.php">
@@ -799,8 +804,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/pentaschool/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="1073" column="68" selection-start-line="1073" selection-start-column="68" selection-end-line="1073" selection-end-column="68" />
+        <state relative-caret-position="510">
+          <caret line="1107" column="1" selection-start-line="1107" selection-start-column="1" selection-end-line="1107" selection-end-column="1" />
         </state>
       </provider>
     </entry>

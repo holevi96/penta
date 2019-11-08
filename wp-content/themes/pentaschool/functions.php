@@ -1089,6 +1089,7 @@ function wpse_file_and_ext_webp( $types, $file, $filename, $mimes ) {
     return $types;
 }
 
+
 /**
  * Adds webp filetype to allowed mimes
  *
