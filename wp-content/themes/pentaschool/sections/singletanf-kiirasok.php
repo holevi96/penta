@@ -138,10 +138,10 @@
 					Bezárás
 					</button>
                 </div>
+                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( $kapcs_tanf ), 'full' )[0]; ?>
+                <div class="image-wrapper" style="background: url(<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>);">
 
-                <div class="image-wrapper">
-				<?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( $kapcs_tanf ), 'full' )[0]; ?>
-                    <img src="<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>" alt="">
+<!--                    <img src="" alt="">-->
 					<?php
 						if(get_field('demovideo')){ ?>
 							<a class="popup" href="#tanfolyamok-single" data-link="<?php echo get_field('demovideo'); ?>" >
