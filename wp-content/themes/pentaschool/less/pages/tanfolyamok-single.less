@@ -131,6 +131,7 @@ body#mobile{
         display: flex;
         justify-content: space-around;
 			a.popup{
+              z-index: 10;
 				position: absolute;
 				top: 42%;
 				left: 44%;
@@ -158,7 +159,8 @@ body#mobile{
           width:100%;
           height: 100%;
           background:#000;
-          opacity: 0.2;
+          opacity: 0.3;
+          z-index: 0;
         }
 		}
       @media @lg, @xl, @xxl{
