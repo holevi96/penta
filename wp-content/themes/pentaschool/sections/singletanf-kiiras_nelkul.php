@@ -42,10 +42,9 @@
                     </div>
                     <?php echo get_post(get_the_ID())->post_content; ?>
                 </div>
+                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'full' )[0]; ?>
+                <div class="image-wrapper" style="background:url('<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>')">
 
-                <div class="image-wrapper">
-				<?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( $kapcs_tanf ), 'full' )[0]; ?>
-                    <img src="<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>" alt="">
                 </div>
 
                 <div id="tanfolyam-details">
