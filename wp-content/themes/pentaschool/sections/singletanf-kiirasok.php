@@ -138,7 +138,7 @@
 					Bezárás
 					</button>
                 </div>
-                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( $kapcs_tanf ), 'medium' )[0]; ?>
+                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( $kapcs_tanf ), 'large' )[0]; ?>
                 <div class="image-wrapper" style="background: url(<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>);">
 
 <!--                    <img src="" alt="">-->

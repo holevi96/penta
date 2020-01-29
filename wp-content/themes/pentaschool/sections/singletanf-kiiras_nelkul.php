@@ -42,7 +42,7 @@
                     </div>
                     <?php echo get_post(get_the_ID())->post_content; ?>
                 </div>
-                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'medium' )[0]; ?>
+                <?php $url = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'large' )[0]; ?>
                 <div class="image-wrapper" style="background:url('<?php echo (!$url)?get_stylesheet_directory_uri().'/img/tanfolyam-1.png':$url; ?>')">
 
                 </div>
